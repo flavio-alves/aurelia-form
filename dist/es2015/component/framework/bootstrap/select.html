@@ -1,0 +1,19 @@
+<template>
+    <require from="./../../../attributes"></require>
+    <require from="./form-group"></require>
+    <form-group element.bind="element" message.bind="message" containerless>
+        <div class="col-md-4">
+            <select attributes.bind="element.attributes"
+                    value.bind="value"
+                    class="form-control">
+                <option repeat.for="option of element.options"
+                        attributes.bind="option.attributes"
+                        name.bind="element.key"
+                        model.bind="option.value">
+                    ${option.name}
+                </option>
+            </select>
+            <div class="form-control-focus"></div>
+        </div>
+    </form-group>
+</template>
