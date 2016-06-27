@@ -58,7 +58,7 @@ function _initializerWarningHelper(descriptor, context) {
     throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'schema-form'), _dec3 = (0, _aureliaFramework.computedFrom)('alert'), _dec4 = (0, _aureliaFramework.computedFrom)('alert'), _dec5 = (0, _aureliaFramework.computedFrom)('alert'), _dec6 = (0, _aureliaFramework.computedFrom)('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
+var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'form-alert'), _dec3 = (0, _aureliaFramework.computedFrom)('alert'), _dec4 = (0, _aureliaFramework.computedFrom)('alert'), _dec5 = (0, _aureliaFramework.computedFrom)('alert'), _dec6 = (0, _aureliaFramework.computedFrom)('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
     function FormAlert() {
         _classCallCheck(this, FormAlert);
 

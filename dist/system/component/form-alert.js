@@ -81,7 +81,7 @@ System.register(["aurelia-framework", "aurelia-view-manager"], function (_export
                 };
             }();
 
-            _export("FormAlert", FormAlert = (_dec = customElement('form-alert'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec3 = computedFrom('alert'), _dec4 = computedFrom('alert'), _dec5 = computedFrom('alert'), _dec6 = computedFrom('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
+            _export("FormAlert", FormAlert = (_dec = customElement('form-alert'), _dec2 = resolvedView('spoonx/form', 'form-alert'), _dec3 = computedFrom('alert'), _dec4 = computedFrom('alert'), _dec5 = computedFrom('alert'), _dec6 = computedFrom('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
                 function FormAlert() {
                     _classCallCheck(this, FormAlert);
 

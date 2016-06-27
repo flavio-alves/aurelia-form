@@ -2,7 +2,7 @@ import {bindable, customElement, computedFrom} from "aurelia-framework";
 import {resolvedView} from "aurelia-view-manager";
 
 @customElement('form-alert')
-@resolvedView('spoonx/form', 'schema-form')
+@resolvedView('spoonx/form', 'form-alert')
 export class FormAlert {
     @bindable alert;
     
