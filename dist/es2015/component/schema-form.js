@@ -43,7 +43,7 @@ function _initializerWarningHelper(descriptor, context) {
     throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-import { bindable, bindingMode, customElement } from "aurelia-framework";
+import { bindable, bindingMode, containerless, customElement } from "aurelia-framework";
 import { resolvedView } from "aurelia-view-manager";
 
 export let SchemaForm = (_dec = customElement('schema-form'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = class SchemaForm {

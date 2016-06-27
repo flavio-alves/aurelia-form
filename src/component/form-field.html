@@ -1,10 +1,11 @@
 <template>
     <!-- does not have a view model, meaning that it is a html only component -->
-    <compose if.bind="!hasViewModel" view.bind="view"></compose>
+    <compose if.bind="!hasViewModel" view.bind="view" containerless></compose>
 
     <!-- has a view model this is a component with view model -->
     <compose if.bind="hasViewModel"
              model.bind="{element: element, value: value}"
-             view-model.bind="view">
+             view-model.bind="view"
+             containerless>
     </compose>
 </template>

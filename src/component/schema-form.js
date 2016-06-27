@@ -1,4 +1,4 @@
-import {bindable, bindingMode, customElement} from "aurelia-framework";
+import {bindable, bindingMode, containerless, customElement} from "aurelia-framework";
 import {resolvedView} from "aurelia-view-manager";
 
 @customElement('schema-form')

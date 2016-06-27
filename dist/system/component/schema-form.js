@@ -3,7 +3,7 @@
 System.register(["aurelia-framework", "aurelia-view-manager"], function (_export, _context) {
     "use strict";
 
-    var bindable, bindingMode, customElement, resolvedView, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, SchemaForm;
+    var bindable, bindingMode, containerless, customElement, resolvedView, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, SchemaForm;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -58,6 +58,7 @@ System.register(["aurelia-framework", "aurelia-view-manager"], function (_export
         setters: [function (_aureliaFramework) {
             bindable = _aureliaFramework.bindable;
             bindingMode = _aureliaFramework.bindingMode;
+            containerless = _aureliaFramework.containerless;
             customElement = _aureliaFramework.customElement;
         }, function (_aureliaViewManager) {
             resolvedView = _aureliaViewManager.resolvedView;
