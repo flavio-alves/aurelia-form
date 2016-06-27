@@ -75,7 +75,7 @@ define(["exports", "aurelia-framework", "aurelia-view-manager"], function (expor
 
     var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _desc, _value, _class2, _descriptor;
 
-    var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'schema-form'), _dec3 = computedFrom('alert'), _dec4 = computedFrom('alert'), _dec5 = computedFrom('alert'), _dec6 = computedFrom('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
+    var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'schema-form'), _dec3 = (0, _aureliaFramework.computedFrom)('alert'), _dec4 = (0, _aureliaFramework.computedFrom)('alert'), _dec5 = (0, _aureliaFramework.computedFrom)('alert'), _dec6 = (0, _aureliaFramework.computedFrom)('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
         function FormAlert() {
             _classCallCheck(this, FormAlert);
 

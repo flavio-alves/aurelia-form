@@ -3,7 +3,7 @@
 System.register(["aurelia-framework", "aurelia-view-manager"], function (_export, _context) {
     "use strict";
 
-    var bindable, customElement, resolvedView, _createClass, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _desc, _value, _class2, _descriptor, FormAlert;
+    var bindable, customElement, computedFrom, resolvedView, _createClass, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _desc, _value, _class2, _descriptor, FormAlert;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -58,6 +58,7 @@ System.register(["aurelia-framework", "aurelia-view-manager"], function (_export
         setters: [function (_aureliaFramework) {
             bindable = _aureliaFramework.bindable;
             customElement = _aureliaFramework.customElement;
+            computedFrom = _aureliaFramework.computedFrom;
         }, function (_aureliaViewManager) {
             resolvedView = _aureliaViewManager.resolvedView;
         }],

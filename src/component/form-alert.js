@@ -1,4 +1,4 @@
-import {bindable, customElement} from "aurelia-framework";
+import {bindable, customElement, computedFrom} from "aurelia-framework";
 import {resolvedView} from "aurelia-view-manager";
 
 @customElement('form-alert')
