@@ -13,7 +13,7 @@ export function configure(aurelia, configCallback) {
         location: '{{framepath}}/{{view}}.html',
         map: {
             /* aurelia-form specific view are also overridable */
-            'form-label': './form-label.html',
+            'form-alert': './form-alert.html',
             'form-field': './form-field.html',
             'form-fields': './form-fields.html',
             'schema-form': './schema-form.html',

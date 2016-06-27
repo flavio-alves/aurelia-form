@@ -12,7 +12,7 @@ export function configure(aurelia, configCallback) {
         base: './../component',
         location: '{{framepath}}/{{view}}.html',
         map: {
-            'form-label': './form-label.html',
+            'form-alert': './form-alert.html',
             'form-field': './form-field.html',
             'form-fields': './form-fields.html',
             'schema-form': './schema-form.html',
