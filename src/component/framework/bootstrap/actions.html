@@ -9,7 +9,7 @@
                         type="button"
                         attributes.bind="action.attributes"
                         click.delegate="action.action($event)">
-                    <i class=""></i>
+                    <i attributes.bind="action.icon.attributes"></i>
                     ${action.label}
                 </button>
             </div>
