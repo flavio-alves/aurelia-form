@@ -1,7 +1,8 @@
-import {FormGroup} from './../form-group';
+import {FormGroup} from "./../form-group";
 
 /***
  * in case behaviour has to be altered
  */
-
-export class FormGroupCustomElement extends FormGroup { }
+export class FormGroupCustomElement extends FormGroup {
+    //
+}

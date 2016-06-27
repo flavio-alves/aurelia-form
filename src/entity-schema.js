@@ -8,25 +8,28 @@
  * @returns {object[]} a schema consisting out of element objects
  */
 export function entitySchema(entity) {
-  let metadata     = entity.getMeta();
-  let types        = metadata.fetch('types') || {};
-  let associations = metadata.fetch('associations');
-  let schema       = [];
+    let metadata = entity.getMeta();
+    let types = metadata.fetch('types') || {};
+    let associations = metadata.fetch('associations');
+    let schema = [];
 
-  for (let key of Object.keys(entity)) {
-    if (key === '__validationReporter__') {continue;} /* should be fixed in orm */
-    let element = {
-      key: key,
-      type: types[key]
-    };
+    for (let key of Object.keys(entity)) {
+        if (key === '__validationReporter__') {
+            continue;
+        }
+        /* should be fixed in orm */
+        let element = {
+            key: key,
+            type: types[key]
+        };
 
-    if (associations[key] && associations[key].type === 'collection') {
-      element.type = 'collection';
-      element.schema = entitySchema(entityManager.getEntity(key));
+        if (associations[key] && associations[key].type === 'collection') {
+            element.type = 'collection';
+            element.schema = entitySchema(entityManager.getEntity(key));
+        }
+
+        schema.push(element);
     }
 
-    schema.push(element);
-  }
-
-  return schema;
+    return schema;
 }

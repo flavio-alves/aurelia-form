@@ -1,3 +1,5 @@
-import {Collection} from './../collection';
+import {Collection} from "./../collection";
 
-export class CollectionCustomElement extends Collection {}
+export class CollectionCustomElement extends Collection {
+    //
+}

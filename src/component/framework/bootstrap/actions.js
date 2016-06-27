@@ -1,3 +1,5 @@
-import {Actions} from '../actions';
+import {Actions} from "../actions";
 
-export class ActionsCustomElement extends Actions {}
+export class ActionsCustomElement extends Actions {
+    //
+}

@@ -1,4 +1,4 @@
-import {inject} from 'aurelia-dependency-injection';
+import {inject} from "aurelia-dependency-injection";
 
 /***
  * is only used internally. In future might make this a seperate plugin
@@ -7,12 +7,12 @@ import {inject} from 'aurelia-dependency-injection';
 @inject(Element)
 export class AttributesCustomAttribute {
 
-  constructor(element) {
-    this.element = element;
-  }
+    constructor(element) {
+        this.element = element;
+    }
 
-  valueChanged() {
-    $(this.element).attr(this.value || {});
-  }
+    valueChanged() {
+        $(this.element).attr(this.value || {});
+    }
 
 }
