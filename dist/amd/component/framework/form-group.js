@@ -73,9 +73,9 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
         throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
     }
 
-    var _dec, _dec2, _dec3, _desc, _value, _class, _descriptor;
+    var _dec, _dec2, _desc, _value, _class, _descriptor;
 
-    var FormGroup = exports.FormGroup = (_dec = (0, _aureliaFramework.computedFrom)('element'), _dec2 = (0, _aureliaFramework.computedFrom)('message'), _dec3 = (0, _aureliaFramework.computedFrom)('element'), (_class = function () {
+    var FormGroup = exports.FormGroup = (_dec = (0, _aureliaFramework.computedFrom)('element'), _dec2 = (0, _aureliaFramework.computedFrom)('element'), (_class = function () {
         function FormGroup() {
             _classCallCheck(this, FormGroup);
 
@@ -88,11 +88,6 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
                 return this.element.label !== false;
             }
         }, {
-            key: 'showsMessage',
-            get: function get() {
-                return !!this.message;
-            }
-        }, {
             key: 'labelText',
             get: function get() {
                 return this.element.label || this.element.key;
@@ -103,5 +98,5 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
     }(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'element', [_aureliaFramework.bindable], {
         enumerable: true,
         initializer: null
-    }), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'showsMessage', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'showsMessage'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec3], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class));
+    }), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class));
 });

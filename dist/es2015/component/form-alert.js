@@ -1,4 +1,4 @@
-var _dec, _dec2, _class, _desc, _value, _class2, _descriptor;
+var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _desc, _value, _class2, _descriptor;
 
 function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -46,12 +46,27 @@ function _initializerWarningHelper(descriptor, context) {
 import { bindable, customElement } from "aurelia-framework";
 import { resolvedView } from "aurelia-view-manager";
 
-export let FormAlert = (_dec = customElement('form-alert'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec(_class = _dec2(_class = (_class2 = class FormAlert {
+export let FormAlert = (_dec = customElement('form-alert'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec3 = computedFrom('alert'), _dec4 = computedFrom('alert'), _dec5 = computedFrom('alert'), _dec6 = computedFrom('alert'), _dec(_class = _dec2(_class = (_class2 = class FormAlert {
     constructor() {
         _initDefineProp(this, "alert", _descriptor, this);
     }
 
+    get attributes() {
+        return this.alert.attributes;
+    }
+
+    get iconAttributes() {
+        return this.alert.icon.attributes;
+    }
+
+    get message() {
+        return this.alert.message;
+    }
+
+    get details() {
+        return this.alert.details;
+    }
 }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "alert", [bindable], {
     enumerable: true,
     initializer: null
-})), _class2)) || _class) || _class);
+}), _applyDecoratedDescriptor(_class2.prototype, "attributes", [_dec3], Object.getOwnPropertyDescriptor(_class2.prototype, "attributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "iconAttributes", [_dec4], Object.getOwnPropertyDescriptor(_class2.prototype, "iconAttributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "message", [_dec5], Object.getOwnPropertyDescriptor(_class2.prototype, "message"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "details", [_dec6], Object.getOwnPropertyDescriptor(_class2.prototype, "details"), _class2.prototype)), _class2)) || _class) || _class);

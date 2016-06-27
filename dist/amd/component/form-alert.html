@@ -1,7 +1,7 @@
 <template>
     <div attributes.bind="alert.attributes">
         <button class="close" data-close="alert"></button>
-        <i attributes.bind="${alert.icon.attributes}"></i> <b>${alert.message}</b>
+        <i attributes.bind="${alert.iconAttributes}"></i> <b>${alert.message}</b>
         <ul>${alert.details}</ul>
     </div>
 </template>

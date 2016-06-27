@@ -15,14 +15,6 @@ export class FormGroup {
     }
 
     /**
-     * @returns {boolean} false if message is empty or null
-     */
-    @computedFrom('message')
-    get showsMessage() {
-        return (!!this.message);
-    }
-
-    /**
      * first check if a label was defined and if not fallback to the key property
      *
      * @returns {string}

@@ -5,4 +5,24 @@ import {resolvedView} from "aurelia-view-manager";
 @resolvedView('spoonx/form', 'schema-form')
 export class FormAlert {
     @bindable alert;
+    
+    @computedFrom('alert')
+    get attributes() {
+        return this.alert.attributes;
+    }
+
+    @computedFrom('alert')
+    get iconAttributes() {
+        return this.alert.icon.attributes;
+    }
+
+    @computedFrom('alert')
+    get message() {
+        return this.alert.message;
+    }
+
+    @computedFrom('alert')
+    get details() {
+        return this.alert.details;
+    }
 }

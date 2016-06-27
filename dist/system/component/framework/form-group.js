@@ -3,7 +3,7 @@
 System.register(['aurelia-framework'], function (_export, _context) {
     "use strict";
 
-    var bindable, computedFrom, _createClass, _dec, _dec2, _dec3, _desc, _value, _class, _descriptor, FormGroup;
+    var bindable, computedFrom, _createClass, _dec, _dec2, _desc, _value, _class, _descriptor, FormGroup;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -78,7 +78,7 @@ System.register(['aurelia-framework'], function (_export, _context) {
                 };
             }();
 
-            _export('FormGroup', FormGroup = (_dec = computedFrom('element'), _dec2 = computedFrom('message'), _dec3 = computedFrom('element'), (_class = function () {
+            _export('FormGroup', FormGroup = (_dec = computedFrom('element'), _dec2 = computedFrom('element'), (_class = function () {
                 function FormGroup() {
                     _classCallCheck(this, FormGroup);
 
@@ -91,11 +91,6 @@ System.register(['aurelia-framework'], function (_export, _context) {
                         return this.element.label !== false;
                     }
                 }, {
-                    key: 'showsMessage',
-                    get: function get() {
-                        return !!this.message;
-                    }
-                }, {
                     key: 'labelText',
                     get: function get() {
                         return this.element.label || this.element.key;
@@ -106,7 +101,7 @@ System.register(['aurelia-framework'], function (_export, _context) {
             }(), (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'element', [bindable], {
                 enumerable: true,
                 initializer: null
-            }), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'showsMessage', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'showsMessage'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec3], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class)));
+            }), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class)));
 
             _export('FormGroup', FormGroup);
         }

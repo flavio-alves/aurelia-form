@@ -1,4 +1,4 @@
-var _dec, _dec2, _dec3, _desc, _value, _class, _descriptor;
+var _dec, _dec2, _desc, _value, _class, _descriptor;
 
 function _initDefineProp(target, property, descriptor, context) {
     if (!descriptor) return;
@@ -45,17 +45,13 @@ function _initializerWarningHelper(descriptor, context) {
 
 import { bindable, computedFrom } from "aurelia-framework";
 
-export let FormGroup = (_dec = computedFrom('element'), _dec2 = computedFrom('message'), _dec3 = computedFrom('element'), (_class = class FormGroup {
+export let FormGroup = (_dec = computedFrom('element'), _dec2 = computedFrom('element'), (_class = class FormGroup {
     constructor() {
         _initDefineProp(this, 'element', _descriptor, this);
     }
 
     get showsLabel() {
         return this.element.label !== false;
-    }
-
-    get showsMessage() {
-        return !!this.message;
     }
 
     get labelText() {
@@ -65,4 +61,4 @@ export let FormGroup = (_dec = computedFrom('element'), _dec2 = computedFrom('me
 }, (_descriptor = _applyDecoratedDescriptor(_class.prototype, 'element', [bindable], {
     enumerable: true,
     initializer: null
-}), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'showsMessage', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'showsMessage'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec3], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class));
+}), _applyDecoratedDescriptor(_class.prototype, 'showsLabel', [_dec], Object.getOwnPropertyDescriptor(_class.prototype, 'showsLabel'), _class.prototype), _applyDecoratedDescriptor(_class.prototype, 'labelText', [_dec2], Object.getOwnPropertyDescriptor(_class.prototype, 'labelText'), _class.prototype)), _class));
