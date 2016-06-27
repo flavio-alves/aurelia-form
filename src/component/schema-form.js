@@ -8,4 +8,7 @@ export class SchemaForm {
 
     @bindable({defaultBindingMode: bindingMode.twoWay})
     model;
+
+    @bindable({defaultBindingMode: bindingMode.twoWay})
+    alert;
 }

@@ -73,9 +73,9 @@ define(["exports", "aurelia-framework", "aurelia-view-manager"], function (expor
         throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
     }
 
-    var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _desc, _value, _class2, _descriptor;
+    var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _desc, _value, _class2, _descriptor;
 
-    var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'form-alert'), _dec3 = (0, _aureliaFramework.computedFrom)('alert'), _dec4 = (0, _aureliaFramework.computedFrom)('alert'), _dec5 = (0, _aureliaFramework.computedFrom)('alert'), _dec6 = (0, _aureliaFramework.computedFrom)('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
+    var FormAlert = exports.FormAlert = (_dec = (0, _aureliaFramework.customElement)('form-alert'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'form-alert'), _dec3 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec4 = (0, _aureliaFramework.computedFrom)('alert'), _dec5 = (0, _aureliaFramework.computedFrom)('alert'), _dec6 = (0, _aureliaFramework.computedFrom)('alert'), _dec7 = (0, _aureliaFramework.computedFrom)('alert'), _dec(_class = _dec2(_class = (_class2 = function () {
         function FormAlert() {
             _classCallCheck(this, FormAlert);
 
@@ -105,8 +105,8 @@ define(["exports", "aurelia-framework", "aurelia-view-manager"], function (expor
         }]);
 
         return FormAlert;
-    }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "alert", [_aureliaFramework.bindable], {
+    }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "alert", [_dec3], {
         enumerable: true,
         initializer: null
-    }), _applyDecoratedDescriptor(_class2.prototype, "attributes", [_dec3], Object.getOwnPropertyDescriptor(_class2.prototype, "attributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "iconAttributes", [_dec4], Object.getOwnPropertyDescriptor(_class2.prototype, "iconAttributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "message", [_dec5], Object.getOwnPropertyDescriptor(_class2.prototype, "message"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "details", [_dec6], Object.getOwnPropertyDescriptor(_class2.prototype, "details"), _class2.prototype)), _class2)) || _class) || _class);
+    }), _applyDecoratedDescriptor(_class2.prototype, "attributes", [_dec4], Object.getOwnPropertyDescriptor(_class2.prototype, "attributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "iconAttributes", [_dec5], Object.getOwnPropertyDescriptor(_class2.prototype, "iconAttributes"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "message", [_dec6], Object.getOwnPropertyDescriptor(_class2.prototype, "message"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "details", [_dec7], Object.getOwnPropertyDescriptor(_class2.prototype, "details"), _class2.prototype)), _class2)) || _class) || _class);
 });

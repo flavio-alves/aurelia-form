@@ -3,7 +3,7 @@
 System.register(["aurelia-framework", "aurelia-view-manager"], function (_export, _context) {
     "use strict";
 
-    var bindable, bindingMode, containerless, customElement, resolvedView, _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2, SchemaForm;
+    var bindable, bindingMode, containerless, customElement, resolvedView, _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3, SchemaForm;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -64,16 +64,21 @@ System.register(["aurelia-framework", "aurelia-view-manager"], function (_export
             resolvedView = _aureliaViewManager.resolvedView;
         }],
         execute: function () {
-            _export("SchemaForm", SchemaForm = (_dec = customElement('schema-form'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function SchemaForm() {
+            _export("SchemaForm", SchemaForm = (_dec = customElement('schema-form'), _dec2 = resolvedView('spoonx/form', 'schema-form'), _dec3 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec4 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function SchemaForm() {
                 _classCallCheck(this, SchemaForm);
 
                 _initDefineProp(this, "schema", _descriptor, this);
 
                 _initDefineProp(this, "model", _descriptor2, this);
+
+                _initDefineProp(this, "alert", _descriptor3, this);
             }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "schema", [bindable], {
                 enumerable: true,
                 initializer: null
             }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "model", [_dec3], {
+                enumerable: true,
+                initializer: null
+            }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "alert", [_dec4], {
                 enumerable: true,
                 initializer: null
             })), _class2)) || _class) || _class));

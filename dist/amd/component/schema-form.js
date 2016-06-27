@@ -55,18 +55,23 @@ define(["exports", "aurelia-framework", "aurelia-view-manager"], function (expor
         throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
     }
 
-    var _dec, _dec2, _dec3, _class, _desc, _value, _class2, _descriptor, _descriptor2;
+    var _dec, _dec2, _dec3, _dec4, _class, _desc, _value, _class2, _descriptor, _descriptor2, _descriptor3;
 
-    var SchemaForm = exports.SchemaForm = (_dec = (0, _aureliaFramework.customElement)('schema-form'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'schema-form'), _dec3 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function SchemaForm() {
+    var SchemaForm = exports.SchemaForm = (_dec = (0, _aureliaFramework.customElement)('schema-form'), _dec2 = (0, _aureliaViewManager.resolvedView)('spoonx/form', 'schema-form'), _dec3 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec4 = (0, _aureliaFramework.bindable)({ defaultBindingMode: _aureliaFramework.bindingMode.twoWay }), _dec(_class = _dec2(_class = (_class2 = function SchemaForm() {
         _classCallCheck(this, SchemaForm);
 
         _initDefineProp(this, "schema", _descriptor, this);
 
         _initDefineProp(this, "model", _descriptor2, this);
+
+        _initDefineProp(this, "alert", _descriptor3, this);
     }, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "schema", [_aureliaFramework.bindable], {
         enumerable: true,
         initializer: null
     }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "model", [_dec3], {
+        enumerable: true,
+        initializer: null
+    }), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "alert", [_dec4], {
         enumerable: true,
         initializer: null
     })), _class2)) || _class) || _class);
