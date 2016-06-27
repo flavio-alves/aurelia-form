@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-System.register(['./../form-group'], function (_export, _context) {
+System.register(["./../form-group"], function (_export, _context) {
   "use strict";
 
   var FormGroup, FormGroupCustomElement;
@@ -40,7 +40,7 @@ System.register(['./../form-group'], function (_export, _context) {
       FormGroup = _formGroup.FormGroup;
     }],
     execute: function () {
-      _export('FormGroupCustomElement', FormGroupCustomElement = function (_FormGroup) {
+      _export("FormGroupCustomElement", FormGroupCustomElement = function (_FormGroup) {
         _inherits(FormGroupCustomElement, _FormGroup);
 
         function FormGroupCustomElement() {
@@ -52,7 +52,7 @@ System.register(['./../form-group'], function (_export, _context) {
         return FormGroupCustomElement;
       }(FormGroup));
 
-      _export('FormGroupCustomElement', FormGroupCustomElement);
+      _export("FormGroupCustomElement", FormGroupCustomElement);
     }
   };
 });

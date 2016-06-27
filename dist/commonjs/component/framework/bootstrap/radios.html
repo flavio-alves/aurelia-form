@@ -1,7 +1,7 @@
 <template>
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
-    <form-group element.bind="element" message.bind="message" containerless>
+    <form-group element.bind="element" containerless>
         <div class="radio" repeat.for="option of element.options">
             <label>
                 <input attributes.bind="element.attributes"

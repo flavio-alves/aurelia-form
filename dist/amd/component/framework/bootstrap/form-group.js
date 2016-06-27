@@ -1,5 +1,5 @@
-define(['exports', './../form-group'], function (exports, _formGroup) {
-  'use strict';
+define(["exports", "./../form-group"], function (exports, _formGroup) {
+  "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
