@@ -1,4 +1,5 @@
 <template>
+    <require from="./../attributes"></require>
     <div attributes.bind="alert.attributes">
         <button class="close" data-close="alert"></button>
         <i attributes.bind="alert.iconAttributes"></i> <b>${alert.message}</b>
