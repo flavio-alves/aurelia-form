@@ -1,8 +1,7 @@
 <template>
-    <require from="./../attributes"></require>
     <div attributes.bind="alert.attributes">
         <button class="close" data-close="alert"></button>
-        <i attributes.bind="alert.iconAttributes"></i> <b innerhtml.bind="alert.message"></b>
+        <i attributes.bind="alert.icon.attributes"></i> <b innerhtml.bind="alert.message"></b>
         <ul innerhtml.bind="alert.details"></ul>
     </div>
 </template>
