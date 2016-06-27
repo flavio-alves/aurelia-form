@@ -8,6 +8,4 @@ export class SchemaForm {
 
     @bindable({defaultBindingMode: bindingMode.twoWay})
     model;
-
-    @bindable messages;
 }

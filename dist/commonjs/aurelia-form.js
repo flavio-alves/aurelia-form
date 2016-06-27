@@ -37,6 +37,7 @@ function configure(aurelia, configCallback) {
         base: './../component',
         location: '{{framepath}}/{{view}}.html',
         map: {
+            'form-label': './form-label.html',
             'form-field': './form-field.html',
             'form-fields': './form-fields.html',
             'schema-form': './schema-form.html',
@@ -84,7 +85,7 @@ function configure(aurelia, configCallback) {
         configCallback(formConfig);
     }
 
-    aurelia.globalResources('./component/entity-form', './component/schema-form', './component/form-fields', './component/form-field');
+    aurelia.globalResources('./component/entity-form', './component/schema-form', './component/form-fields', './component/form-field', './component/form-alert');
 }
 
 exports.Config = _config.Config;

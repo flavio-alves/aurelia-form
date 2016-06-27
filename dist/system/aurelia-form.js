@@ -30,6 +30,7 @@ System.register(["./config", "aurelia-view-manager", "./entity-schema", "./form"
                     base: './../component',
                     location: '{{framepath}}/{{view}}.html',
                     map: {
+                        'form-label': './form-label.html',
                         'form-field': './form-field.html',
                         'form-fields': './form-fields.html',
                         'schema-form': './schema-form.html',
@@ -77,7 +78,7 @@ System.register(["./config", "aurelia-view-manager", "./entity-schema", "./form"
                     configCallback(formConfig);
                 }
 
-                aurelia.globalResources('./component/entity-form', './component/schema-form', './component/form-fields', './component/form-field');
+                aurelia.globalResources('./component/entity-form', './component/schema-form', './component/form-fields', './component/form-field', './component/form-alert');
             }
 
             _export("configure", configure);

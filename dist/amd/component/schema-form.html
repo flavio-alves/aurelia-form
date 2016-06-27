@@ -2,7 +2,7 @@
     <form class="form-horizontal">
         <slot name="schema-form-header" containerless></slot>
         <div class="form-body">
-            <alert alert.bind="alert" containerless></alert>
+            <form-alert alert.bind="alert" containerless></form-alert>
             <form-fields model.bind="model"
                          schema.bind="schema"
                          containerless>
