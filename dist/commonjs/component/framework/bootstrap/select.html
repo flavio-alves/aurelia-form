@@ -3,9 +3,8 @@
     <require from="./form-group"></require>
     <form-group element.bind="element" containerless>
         <div class="col-md-4">
-            <select attributes.bind="element.attributes"
-                    value.bind="value"
-                    class="form-control">
+            <select attributes.bind="element.attributes" value.bind="value" class="form-control">
+                <option value.bind=""></option>
                 <option repeat.for="option of element.options"
                         attributes.bind="option.attributes"
                         name.bind="element.key"
