@@ -1,11 +1,14 @@
 <template>
-    <require from="./form-group"></require>
     <require from="./../../../attributes"></require>
+    <require from="./form-group"></require>
     <form-group element.bind="element" containerless>
-    <textarea attributes.bind="element.attributes"
-              class="form-control"
-              name.bind="element.key"
-              value.bind="value">
-    </textarea>
+        <div class="col-md-4">
+            <textarea attributes.bind="element.attributes"
+                      class="form-control input-sm"
+                      name.bind="element.key"
+                      value.bind="value">
+            </textarea>
+            <div class="form-control-focus"></div>
+        </div>
     </form-group>
 </template>
