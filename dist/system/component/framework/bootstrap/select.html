@@ -4,7 +4,7 @@
     <form-group element.bind="element" containerless>
         <div class="col-md-4">
             <select attributes.bind="element.attributes" value.bind="value" class="form-control">
-                <option value=""></option>
+                <option value="" if.bind="!element.multiple"></option>
                 <option repeat.for="option of element.options"
                         attributes.bind="option.attributes"
                         name.bind="element.key"
