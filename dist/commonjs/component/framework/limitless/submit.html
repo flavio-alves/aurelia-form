@@ -1,0 +1,11 @@
+<template>
+    <require from="./../../../attributes"></require>
+    <require from="./form-group"></require>
+    <form-group element.bind="element" containerless>
+        <input attributes.bind="element.attributes"
+               class="pull-right btn btn-primary"
+               type.bind="element.type"
+               name.bind="element.key"
+               value.bind="element.key">
+    </form-group>
+</template>

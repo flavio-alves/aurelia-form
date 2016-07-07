@@ -3,7 +3,7 @@
     <require from="./../../../attributes"></require>
     <div class="form-actions" element.bind="element" attributes.bind="element.attributes">
         <div class="row">
-            <div class="col-md-offset-3 col-md-9">
+            <div class="col-md-offset-${element.labelSize} col-md-${12 - element.labelSize}">
                 <button repeat.for="action of element.actions"
                         class="btn btn-default"
                         type="button"

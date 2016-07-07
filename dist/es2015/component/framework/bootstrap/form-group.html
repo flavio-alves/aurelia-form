@@ -3,7 +3,7 @@
     <div class="form-group form-md-line-input" attributes.bind="element.attributes">
         <label t.bind="labelText"
                if.bind="showsLabel"
-               class="control-label col-md-3">
+               class="control-label col-md-${element.labelSize}">
             ${labelText}
         </label>
         <slot></slot>

@@ -2,7 +2,7 @@
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
     <form-group element.bind="element" containerless>
-        <div class="col-md-4">
+        <div class="col-md-${element.elementSize}">
             <input attributes.bind="element.attributes"
                    class="form-control input-sm"
                    type.bind="element.type"
