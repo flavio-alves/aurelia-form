@@ -22,6 +22,7 @@ export function configure(aurelia, configCallback) {
             /* custom elements with a view model do not end with .html */
             actions: '{{framepath}}/actions',
             collection: '{{framepath}}/collection',
+            select2: '{{framepath}}/select2',
 
             /* all input components */
             text: '{{framepath}}/input.html',
