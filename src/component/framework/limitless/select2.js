@@ -1,20 +1,23 @@
 import {bindable, inject} from "aurelia-framework";
-import $ from "jquery";
-import "select2";
 
 @inject(Element)
 export class Select2CustomElement {
 
     constructor(element) {
+        console.log('constructor');
         this.element = element;
     }
 
     activate(model) {
+        console.log('activate');
         this.element = model.element;
         this.model = model.value;
     }
 
     attached() {
+        console.log('attached');
+        console.log(this.element);
+
         $(this.element).find('.select2')
             .select2()
             .on('change', (event) => {

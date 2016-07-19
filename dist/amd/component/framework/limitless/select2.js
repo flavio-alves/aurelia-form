@@ -1,18 +1,10 @@
-define(["exports", "aurelia-framework", "jquery", "select2"], function (exports, _aureliaFramework, _jquery) {
-    "use strict";
+define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
+    'use strict';
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
     exports.Select2CustomElement = undefined;
-
-    var _jquery2 = _interopRequireDefault(_jquery);
-
-    function _interopRequireDefault(obj) {
-        return obj && obj.__esModule ? obj : {
-            default: obj
-        };
-    }
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -26,10 +18,12 @@ define(["exports", "aurelia-framework", "jquery", "select2"], function (exports,
         function Select2CustomElement(element) {
             _classCallCheck(this, Select2CustomElement);
 
+            console.log('constructor');
             this.element = element;
         }
 
         Select2CustomElement.prototype.activate = function activate(model) {
+            console.log('activate');
             this.element = model.element;
             this.model = model.value;
         };
@@ -37,7 +31,10 @@ define(["exports", "aurelia-framework", "jquery", "select2"], function (exports,
         Select2CustomElement.prototype.attached = function attached() {
             var _this = this;
 
-            (0, _jquery2.default)(this.element).find('.select2').select2().on('change', function (event) {
+            console.log('attached');
+            console.log(this.element);
+
+            $(this.element).find('.select2').select2().on('change', function (event) {
                 _this.value = event.target.value;
 
                 if (event.originalEvent) {
@@ -49,7 +46,7 @@ define(["exports", "aurelia-framework", "jquery", "select2"], function (exports,
         };
 
         Select2CustomElement.prototype.detached = function detached() {
-            (0, _jquery2.default)(this.element).find('.select2').select2('destroy');
+            $(this.element).find('.select2').select2('destroy');
         };
 
         return Select2CustomElement;
