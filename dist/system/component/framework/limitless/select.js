@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-System.register(['aurelia-framework', 'jquery', 'select2'], function (_export, _context) {
+System.register(["aurelia-framework", "jquery", "select2"], function (_export, _context) {
     "use strict";
 
     var bindable, inject, $, _dec, _class, SelectCustomElement;
@@ -19,7 +19,7 @@ System.register(['aurelia-framework', 'jquery', 'select2'], function (_export, _
             $ = _jquery.default;
         }, function (_select) {}],
         execute: function () {
-            _export('SelectCustomElement', SelectCustomElement = (_dec = inject(Element), _dec(_class = function () {
+            _export("SelectCustomElement", SelectCustomElement = (_dec = inject(Element), _dec(_class = function () {
                 function SelectCustomElement(element) {
                     _classCallCheck(this, SelectCustomElement);
 
@@ -30,31 +30,25 @@ System.register(['aurelia-framework', 'jquery', 'select2'], function (_export, _
                     var _this = this;
 
                     $(this.element).find('select').select2().on('change', function (event) {
-                        var changeEvent = void 0;
+                        _this.value = event.target.value;
 
-                        if (window.CustomEvent) {
-                            changeEvent = new CustomEvent('change', {
-                                detail: {
-                                    value: event.target.value
-                                },
-                                bubbles: true
-                            });
-                        } else {
-                            changeEvent = document.createEvent('CustomEvent');
-                            changeEvent.initCustomEvent('change', true, true, {
-                                detail: {
-                                    value: event.target.value
-                                }
-                            });
+
+                        if (event.originalEvent) {
+                            return;
                         }
-                        _this.element.dispatchEvent(changeEvent);
+
+                        _this.element.dispatchEvent(new Event('change'));
                     });
+                };
+
+                SelectCustomElement.prototype.detached = function detached() {
+                    $(this.element).find('select').select2('destroy');
                 };
 
                 return SelectCustomElement;
             }()) || _class));
 
-            _export('SelectCustomElement', SelectCustomElement);
+            _export("SelectCustomElement", SelectCustomElement);
         }
     };
 });

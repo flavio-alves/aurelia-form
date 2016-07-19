@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -7,13 +7,13 @@ exports.SelectCustomElement = undefined;
 
 var _dec, _class;
 
-var _aureliaFramework = require('aurelia-framework');
+var _aureliaFramework = require("aurelia-framework");
 
-var _jquery = require('jquery');
+var _jquery = require("jquery");
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-require('select2');
+require("select2");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,25 +30,19 @@ var SelectCustomElement = exports.SelectCustomElement = (_dec = (0, _aureliaFram
         var _this = this;
 
         (0, _jquery2.default)(this.element).find('select').select2().on('change', function (event) {
-            var changeEvent = void 0;
+            _this.value = event.target.value;
 
-            if (window.CustomEvent) {
-                changeEvent = new CustomEvent('change', {
-                    detail: {
-                        value: event.target.value
-                    },
-                    bubbles: true
-                });
-            } else {
-                changeEvent = document.createEvent('CustomEvent');
-                changeEvent.initCustomEvent('change', true, true, {
-                    detail: {
-                        value: event.target.value
-                    }
-                });
+
+            if (event.originalEvent) {
+                return;
             }
-            _this.element.dispatchEvent(changeEvent);
+
+            _this.element.dispatchEvent(new Event('change'));
         });
+    };
+
+    SelectCustomElement.prototype.detached = function detached() {
+        (0, _jquery2.default)(this.element).find('select').select2('destroy');
     };
 
     return SelectCustomElement;

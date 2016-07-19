@@ -1,9 +1,8 @@
 var _dec, _class;
 
-import { bindable, inject } from 'aurelia-framework';
-
-import $ from 'jquery';
-import 'select2';
+import { bindable, inject } from "aurelia-framework";
+import $ from "jquery";
+import "select2";
 
 export let SelectCustomElement = (_dec = inject(Element), _dec(_class = class SelectCustomElement {
 
@@ -13,25 +12,19 @@ export let SelectCustomElement = (_dec = inject(Element), _dec(_class = class Se
 
     attached() {
         $(this.element).find('select').select2().on('change', event => {
-            let changeEvent;
+            this.value = event.target.value;
 
-            if (window.CustomEvent) {
-                changeEvent = new CustomEvent('change', {
-                    detail: {
-                        value: event.target.value
-                    },
-                    bubbles: true
-                });
-            } else {
-                changeEvent = document.createEvent('CustomEvent');
-                changeEvent.initCustomEvent('change', true, true, {
-                    detail: {
-                        value: event.target.value
-                    }
-                });
+
+            if (event.originalEvent) {
+                return;
             }
-            this.element.dispatchEvent(changeEvent);
+
+            this.element.dispatchEvent(new Event('change'));
         });
+    }
+
+    detached() {
+        $(this.element).find('select').select2('destroy');
     }
 
 }) || _class);

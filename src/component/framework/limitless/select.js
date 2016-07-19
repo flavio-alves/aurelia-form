@@ -1,7 +1,6 @@
-import {bindable, inject} from 'aurelia-framework';
-
-import $ from 'jquery';
-import 'select2';
+import {bindable, inject} from "aurelia-framework";
+import $ from "jquery";
+import "select2";
 
 @inject(Element)
 export class SelectCustomElement {
@@ -14,25 +13,36 @@ export class SelectCustomElement {
         $(this.element).find('select')
             .select2()
             .on('change', (event) => {
-                let changeEvent;
+                this.value = event.target.value;
+                // let changeEvent;
 
-                if (window.CustomEvent) {
-                    changeEvent = new CustomEvent('change', {
-                        detail: {
-                            value: event.target.value
-                        },
-                        bubbles: true
-                    });
-                } else {
-                    changeEvent = document.createEvent('CustomEvent');
-                    changeEvent.initCustomEvent('change', true, true, {
-                        detail: {
-                            value: event.target.value
-                        }
-                    });
+                if (event.originalEvent) {
+                    return;
                 }
-                this.element.dispatchEvent(changeEvent);
+
+                this.element.dispatchEvent(new Event('change'));
+
+                // if (window.CustomEvent) {
+                //     changeEvent = new CustomEvent('change', {
+                //         detail: {
+                //             value: event.target.value
+                //         },
+                //         bubbles: true
+                //     });
+                // } else {
+                //     changeEvent = document.createEvent('CustomEvent');
+                //     changeEvent.initCustomEvent('change', true, true, {
+                //         detail: {
+                //             value: event.target.value
+                //         }
+                //     });
+                // }
+                // this.element.dispatchEvent(changeEvent);
             });
+    }
+
+    detached() {
+        $(this.element).find('select').select2('destroy');
     }
 
 }
