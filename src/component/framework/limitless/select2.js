@@ -9,6 +9,11 @@ export class SelectCustomElement {
         this.element = element;
     }
 
+    activate(model) {
+        this.element = model.element;
+        this.model = model.value;
+    }
+
     attached() {
         $(this.element).find('.select2')
             .select2()

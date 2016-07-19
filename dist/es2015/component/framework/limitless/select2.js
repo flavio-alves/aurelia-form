@@ -10,6 +10,11 @@ export let SelectCustomElement = (_dec = inject(Element), _dec(_class = class Se
         this.element = element;
     }
 
+    activate(model) {
+        this.element = model.element;
+        this.model = model.value;
+    }
+
     attached() {
         $(this.element).find('.select2').select2().on('change', event => {
             this.value = event.target.value;

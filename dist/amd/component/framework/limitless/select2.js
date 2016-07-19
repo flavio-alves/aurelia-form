@@ -29,6 +29,11 @@ define(["exports", "aurelia-framework", "jquery", "select2"], function (exports,
             this.element = element;
         }
 
+        SelectCustomElement.prototype.activate = function activate(model) {
+            this.element = model.element;
+            this.model = model.value;
+        };
+
         SelectCustomElement.prototype.attached = function attached() {
             var _this = this;
 

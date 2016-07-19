@@ -26,6 +26,11 @@ var SelectCustomElement = exports.SelectCustomElement = (_dec = (0, _aureliaFram
         this.element = element;
     }
 
+    SelectCustomElement.prototype.activate = function activate(model) {
+        this.element = model.element;
+        this.model = model.value;
+    };
+
     SelectCustomElement.prototype.attached = function attached() {
         var _this = this;
 
