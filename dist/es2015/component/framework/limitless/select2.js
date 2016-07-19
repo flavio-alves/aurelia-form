@@ -4,7 +4,7 @@ import { bindable, inject } from "aurelia-framework";
 import $ from "jquery";
 import "select2";
 
-export let SelectCustomElement = (_dec = inject(Element), _dec(_class = class SelectCustomElement {
+export let Select2CustomElement = (_dec = inject(Element), _dec(_class = class Select2CustomElement {
 
     constructor(element) {
         this.element = element;

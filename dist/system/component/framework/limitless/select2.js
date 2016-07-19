@@ -3,7 +3,7 @@
 System.register(["aurelia-framework", "jquery", "select2"], function (_export, _context) {
     "use strict";
 
-    var bindable, inject, $, _dec, _class, SelectCustomElement;
+    var bindable, inject, $, _dec, _class, Select2CustomElement;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -19,19 +19,19 @@ System.register(["aurelia-framework", "jquery", "select2"], function (_export, _
             $ = _jquery.default;
         }, function (_select) {}],
         execute: function () {
-            _export("SelectCustomElement", SelectCustomElement = (_dec = inject(Element), _dec(_class = function () {
-                function SelectCustomElement(element) {
-                    _classCallCheck(this, SelectCustomElement);
+            _export("Select2CustomElement", Select2CustomElement = (_dec = inject(Element), _dec(_class = function () {
+                function Select2CustomElement(element) {
+                    _classCallCheck(this, Select2CustomElement);
 
                     this.element = element;
                 }
 
-                SelectCustomElement.prototype.activate = function activate(model) {
+                Select2CustomElement.prototype.activate = function activate(model) {
                     this.element = model.element;
                     this.model = model.value;
                 };
 
-                SelectCustomElement.prototype.attached = function attached() {
+                Select2CustomElement.prototype.attached = function attached() {
                     var _this = this;
 
                     $(this.element).find('.select2').select2().on('change', function (event) {
@@ -45,14 +45,14 @@ System.register(["aurelia-framework", "jquery", "select2"], function (_export, _
                     });
                 };
 
-                SelectCustomElement.prototype.detached = function detached() {
+                Select2CustomElement.prototype.detached = function detached() {
                     $(this.element).find('.select2').select2('destroy');
                 };
 
-                return SelectCustomElement;
+                return Select2CustomElement;
             }()) || _class));
 
-            _export("SelectCustomElement", SelectCustomElement);
+            _export("Select2CustomElement", Select2CustomElement);
         }
     };
 });

@@ -3,7 +3,7 @@ import $ from "jquery";
 import "select2";
 
 @inject(Element)
-export class SelectCustomElement {
+export class Select2CustomElement {
 
     constructor(element) {
         this.element = element;
