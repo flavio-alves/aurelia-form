@@ -4,9 +4,9 @@ import { bindable, inject } from "aurelia-framework";
 
 export let Select2CustomElement = (_dec = inject(Element), _dec(_class = class Select2CustomElement {
 
-    constructor(element) {
+    constructor(htmlElement) {
         console.log('constructor');
-        this.element = element;
+        this.htmlElement = htmlElement;
     }
 
     activate(model) {
@@ -17,16 +17,16 @@ export let Select2CustomElement = (_dec = inject(Element), _dec(_class = class S
 
     attached() {
         console.log('attached');
-        console.log(this.element);
+        console.log(this.htmlElement);
 
-        $(this.element).find('.select2').select2().on('change', event => {
+        $(this.htmlElement).find('select').select2().on('change', event => {
             this.value = event.target.value;
 
             if (event.originalEvent) {
                 return;
             }
 
-            this.element.dispatchEvent(new Event('change'));
+            this.htmlElement.dispatchEvent(new Event('change'));
         });
     }
 

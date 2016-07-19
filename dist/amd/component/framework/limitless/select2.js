@@ -15,11 +15,11 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
     var _dec, _class;
 
     var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFramework.inject)(Element), _dec(_class = function () {
-        function Select2CustomElement(element) {
+        function Select2CustomElement(htmlElement) {
             _classCallCheck(this, Select2CustomElement);
 
             console.log('constructor');
-            this.element = element;
+            this.htmlElement = htmlElement;
         }
 
         Select2CustomElement.prototype.activate = function activate(model) {
@@ -32,16 +32,16 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
             var _this = this;
 
             console.log('attached');
-            console.log(this.element);
+            console.log(this.htmlElement);
 
-            $(this.element).find('.select2').select2().on('change', function (event) {
+            $(this.htmlElement).find('select').select2().on('change', function (event) {
                 _this.value = event.target.value;
 
                 if (event.originalEvent) {
                     return;
                 }
 
-                _this.element.dispatchEvent(new Event('change'));
+                _this.htmlElement.dispatchEvent(new Event('change'));
             });
         };
 

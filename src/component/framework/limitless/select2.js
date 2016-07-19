@@ -3,9 +3,9 @@ import {bindable, inject} from "aurelia-framework";
 @inject(Element)
 export class Select2CustomElement {
 
-    constructor(element) {
+    constructor(htmlElement) {
         console.log('constructor');
-        this.element = element;
+        this.htmlElement = htmlElement;
     }
 
     activate(model) {
@@ -16,9 +16,9 @@ export class Select2CustomElement {
 
     attached() {
         console.log('attached');
-        console.log(this.element);
+        console.log(this.htmlElement);
 
-        $(this.element).find('.select2')
+        $(this.htmlElement).find('select')
             .select2()
             .on('change', (event) => {
                 this.value = event.target.value;
@@ -27,7 +27,7 @@ export class Select2CustomElement {
                     return;
                 }
 
-                this.element.dispatchEvent(new Event('change'));
+                this.htmlElement.dispatchEvent(new Event('change'));
             });
     }
 
