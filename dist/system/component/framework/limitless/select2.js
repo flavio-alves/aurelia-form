@@ -3,7 +3,7 @@
 System.register(['aurelia-framework'], function (_export, _context) {
     "use strict";
 
-    var bindable, inject, _dec, _class, Select2CustomElement;
+    var bindable, inject, customElement, _dec, _dec2, _class, Select2CustomElement;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -15,9 +15,10 @@ System.register(['aurelia-framework'], function (_export, _context) {
         setters: [function (_aureliaFramework) {
             bindable = _aureliaFramework.bindable;
             inject = _aureliaFramework.inject;
+            customElement = _aureliaFramework.customElement;
         }],
         execute: function () {
-            _export('Select2CustomElement', Select2CustomElement = (_dec = inject(Element), _dec(_class = function () {
+            _export('Select2CustomElement', Select2CustomElement = (_dec = customElement('select2'), _dec2 = inject(Element), _dec(_class = _dec2(_class = function () {
                 function Select2CustomElement(htmlElement) {
                     _classCallCheck(this, Select2CustomElement);
 
@@ -32,28 +33,28 @@ System.register(['aurelia-framework'], function (_export, _context) {
                 };
 
                 Select2CustomElement.prototype.attached = function attached() {
-                    var _this = this;
+                    var element = $(this.element).find('select');
+                    var select2 = element.select2();
 
-                    console.log('attached');
-                    console.log(this.htmlElement);
-
-                    $(this.htmlElement).find('select').select2().on('change', function (event) {
-                        _this.value = event.target.value;
-
+                    select2.on('change', function (event) {
                         if (event.originalEvent) {
                             return;
                         }
 
-                        _this.htmlElement.dispatchEvent(new Event('change'));
+                        var notice = new Event('change', { bubble: false });
+                        $(element)[0].dispatchEvent(notice);
                     });
+
+                    console.log("select2 attached");
                 };
 
                 Select2CustomElement.prototype.detached = function detached() {
-                    $(this.element).find('.select2').select2('destroy');
+                    $(this.element).find('select').select2('destroy');
+                    console.log("select2 detached");
                 };
 
                 return Select2CustomElement;
-            }()) || _class));
+            }()) || _class) || _class));
 
             _export('Select2CustomElement', Select2CustomElement);
         }

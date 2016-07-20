@@ -1,8 +1,8 @@
-var _dec, _class;
+var _dec, _dec2, _class;
 
-import { bindable, inject } from "aurelia-framework";
+import { bindable, inject, customElement } from "aurelia-framework";
 
-export let Select2CustomElement = (_dec = inject(Element), _dec(_class = class Select2CustomElement {
+export let Select2CustomElement = (_dec = customElement('select2'), _dec2 = inject(Element), _dec(_class = _dec2(_class = class Select2CustomElement {
 
     constructor(htmlElement) {
         console.log('constructor');
@@ -16,22 +16,24 @@ export let Select2CustomElement = (_dec = inject(Element), _dec(_class = class S
     }
 
     attached() {
-        console.log('attached');
-        console.log(this.htmlElement);
+        let element = $(this.element).find('select');
+        let select2 = element.select2();
 
-        $(this.htmlElement).find('select').select2().on('change', event => {
-            this.value = event.target.value;
-
+        select2.on('change', event => {
             if (event.originalEvent) {
                 return;
             }
 
-            this.htmlElement.dispatchEvent(new Event('change'));
+            var notice = new Event('change', { bubble: false });
+            $(element)[0].dispatchEvent(notice);
         });
+
+        console.log("select2 attached");
     }
 
     detached() {
-        $(this.element).find('.select2').select2('destroy');
+        $(this.element).find('select').select2('destroy');
+        console.log("select2 detached");
     }
 
-}) || _class);
+}) || _class) || _class);
