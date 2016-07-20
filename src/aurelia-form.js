@@ -23,6 +23,7 @@ export function configure(aurelia, configCallback) {
             actions: '{{framepath}}/actions',
             collection: '{{framepath}}/collection',
             select2: '{{framepath}}/select2',
+            'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
 
             /* all input components */
             text: '{{framepath}}/input.html',
