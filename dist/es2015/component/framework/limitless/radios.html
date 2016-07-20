@@ -4,12 +4,8 @@
     <form-group element.bind="element" containerless>
         <div class="col-md-${element.elementSize}" repeat.for="option of element.options">
             <label class="radio-inline">
-                <input attributes.bind="element.attributes"
-                       type="radio"
-                       name.bind="option.name"
-                       model.bind="option.id"
-                       checked.bind="value"
-                       class="styled">
+                <input type="radio" name.bind="option.name" model.bind="option.id" checked.bind="value"
+                       attributes.bind="element.attributes" class="styled">
                 ${option.name}
             </label>
         </div>

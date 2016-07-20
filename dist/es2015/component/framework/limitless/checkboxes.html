@@ -4,11 +4,8 @@
     <form-group element.bind="element" attributes.bind="element.attributes" containerless>
         <div class="checkbox" repeat.for="option of element.options">
             <label>
-                <input attributes.bind="option.attributes"
-                       type="checkbox"
-                       name.bind="option.name"
-                       model.bind="option.id"
-                       checked.bind="value">
+                <input type="checkbox" name.bind="option.name" model.bind="option.id"
+                       checked.bind="value" attributes.bind="option.attributes">
                 ${option.name}
             </label>
         </div>

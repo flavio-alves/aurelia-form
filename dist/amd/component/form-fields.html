@@ -1,7 +1,3 @@
 <template>
-    <form-field value.bind="model[element.key]"
-                element.bind="element"
-                repeat.for="element of schema"
-                containerless>
-    </form-field>
+    <form-field repeat.for="element of schema" element.bind="element" value.bind="model[element.key]" containerless> </form-field>
 </template>

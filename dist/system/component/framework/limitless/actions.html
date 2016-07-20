@@ -2,11 +2,8 @@
     <require from="./form-group"></require>
     <require from="./../../../attributes"></require>
     <div class="form-wizard-actions" element.bind="element" attributes.bind="element.attributes">
-        <button repeat.for="action of element.actions"
-                type="button"
-                class="btn btn-default"
-                attributes.bind="action.attributes"
-                click.delegate="action.action($event)">
+        <button type="button" repeat.for="action of element.actions" class="btn btn-default"
+                attributes.bind="action.attributes" click.delegate="action.action($event)">
             <i attributes.bind="action.icon.attributes"></i>
             ${action.label}
         </button>

@@ -1,9 +1,6 @@
 <template>
     <require from="./form-group"></require>
     <form-group element.bind="element" containerless>
-        <input attributes.bind="element.attributes"
-               type="file"
-               name.bind="element.key"
-               value.bind="element.value">
+        <input type="file" name.bind="element.key" value.bind="element.value" attributes.bind="element.attributes">
     </form-group>
 </template>

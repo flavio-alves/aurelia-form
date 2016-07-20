@@ -4,11 +4,8 @@
     <form-group element.bind="element" containerless>
         <div class="checkbox">
             <label>
-                <input attributes.bind="element.attributes"
-                       type="checkbox"
-                       t.bind="label"
-                       name.bind="element.key"
-                       checked.bind="element.value">
+                <input type="checkbox" name.bind="element.key" checked.bind="element.value"
+                       attributes.bind="element.attributes" t.bind="label">
                 ${label}
             </label>
         </div>
