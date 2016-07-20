@@ -14,10 +14,8 @@ export class Select2CustomElement {
      * Handles attached event
      */
     attached() {
-        let self = this;
         let element = $('#' + this.element.key);
         let select2 = $(element).select2({
-            placeholder: 'Please select an option',
             allowClear: true,
             width: '100%'
         });

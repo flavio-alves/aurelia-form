@@ -25,10 +25,8 @@ System.register([], function (_export, _context) {
                 };
 
                 Select2CustomElement.prototype.attached = function attached() {
-                    var self = this;
                     var element = $('#' + this.element.key);
                     var select2 = $(element).select2({
-                        placeholder: 'Please select an option',
                         allowClear: true,
                         width: '100%'
                     });
