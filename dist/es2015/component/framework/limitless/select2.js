@@ -5,8 +5,13 @@ export let Select2CustomElement = class Select2CustomElement {
     }
 
     attached() {
+        let self = this;
         let element = $('#' + this.element.key);
-        let select2 = $(element).select2();
+        let select2 = $(element).select2({
+            placeholder: 'Please select an option',
+            allowClear: true,
+            width: '100%'
+        });
 
         $(select2).on('change', event => {
             if (event.originalEvent) {
