@@ -21,6 +21,7 @@ var BootstrapMultiselectCustomElement = exports.BootstrapMultiselectCustomElemen
         var multiSelect = $(element).multiselect({
             selectedClass: null,
             includeSelectAllOption: true,
+
             nonSelectedText: "Nenhuma opção selecionada",
             nSelectedText: "opções selecionadas",
             allSelectedText: "Todas as opções selecionadas",

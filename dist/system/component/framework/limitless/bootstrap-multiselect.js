@@ -29,6 +29,7 @@ System.register([], function (_export, _context) {
                     var multiSelect = $(element).multiselect({
                         selectedClass: null,
                         includeSelectAllOption: true,
+
                         nonSelectedText: "Nenhuma opção selecionada",
                         nSelectedText: "opções selecionadas",
                         allSelectedText: "Todas as opções selecionadas",

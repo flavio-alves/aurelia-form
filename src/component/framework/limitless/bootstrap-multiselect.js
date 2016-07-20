@@ -18,6 +18,7 @@ export class BootstrapMultiselectCustomElement {
         let multiSelect = $(element).multiselect({
             selectedClass: null,
             includeSelectAllOption: true,
+            // TODO - THIS LABELS ARE TEMPORARY! TRANSLATION IS MISSING
             nonSelectedText: "Nenhuma opção selecionada",
             nSelectedText: "opções selecionadas",
             allSelectedText: "Todas as opções selecionadas",
