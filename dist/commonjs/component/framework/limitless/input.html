@@ -1,10 +1,10 @@
 <template>
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
-    <div class="col-md-${element.elementSize}">
-        <form-group element.bind="element" containerless>
-                <input type.bind="element.type" name.bind="element.key" value.bind="value" class="form-control"
-                       attributes.bind="element.attributes"  placeholder.bind="element.placeholder || ''"/>
-        </form-group>
-    </div>
+    <form-group element.bind="element" containerless>
+        <div class="col-md-${element.elementSize}">
+            <input type.bind="element.type" name.bind="element.key" value.bind="value" class="form-control"
+                   attributes.bind="element.attributes" placeholder.bind="element.placeholder || ''"/>
+        </div>
+    </form-group>
 </template>
