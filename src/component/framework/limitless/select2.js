@@ -14,7 +14,7 @@ export class Select2CustomElement {
      * Handles attached event
      */
     attached() {
-        let element = $('#' + this.element.key);
+        let select  = $('#' + this.element.key);
         let select2 = $(element).select2({
             allowClear: true,
             width: '100%'
@@ -23,7 +23,6 @@ export class Select2CustomElement {
         // on any change, propagate it to underlying select to trigger two-way bind
         $(select2).on('change', (event) => {
             // don't propagate endlessly
-            // see: http://stackoverflow.com/a/34121891/4354884
             if (event.originalEvent) {
                 return;
             }
@@ -32,7 +31,7 @@ export class Select2CustomElement {
                 bubble: false
             });
 
-            $(element)[0].dispatchEvent(notice);
+            $(select)[0].dispatchEvent(notice);
         });
     }
 
