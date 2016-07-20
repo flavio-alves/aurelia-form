@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 System.register([], function (_export, _context) {
     "use strict";
@@ -14,7 +14,7 @@ System.register([], function (_export, _context) {
     return {
         setters: [],
         execute: function () {
-            _export('BootstrapMultiselectCustomElement', BootstrapMultiselectCustomElement = function () {
+            _export("BootstrapMultiselectCustomElement", BootstrapMultiselectCustomElement = function () {
                 function BootstrapMultiselectCustomElement() {
                     _classCallCheck(this, BootstrapMultiselectCustomElement);
                 }
@@ -27,7 +27,14 @@ System.register([], function (_export, _context) {
                 BootstrapMultiselectCustomElement.prototype.attached = function attached() {
                     var element = $('#' + this.element.key);
                     var multiSelect = $(element).multiselect({
-                        selectedClass: null
+                        selectedClass: null,
+                        includeSelectAllOption: true,
+                        nonSelectedText: "Nenhuma opção selecionada",
+                        nSelectedText: "opções selecionadas",
+                        allSelectedText: "Todas as opções selecionadas",
+                        onChange: function onChange(option, checked) {
+                            $.uniform.update();
+                        }
                     });
 
                     $(multiSelect).on('change', function (event) {
@@ -41,6 +48,8 @@ System.register([], function (_export, _context) {
 
                         $(element)[0].dispatchEvent(notice);
                     });
+
+                    $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
                 };
 
                 BootstrapMultiselectCustomElement.prototype.detached = function detached() {};
@@ -48,7 +57,7 @@ System.register([], function (_export, _context) {
                 return BootstrapMultiselectCustomElement;
             }());
 
-            _export('BootstrapMultiselectCustomElement', BootstrapMultiselectCustomElement);
+            _export("BootstrapMultiselectCustomElement", BootstrapMultiselectCustomElement);
         }
     };
 });

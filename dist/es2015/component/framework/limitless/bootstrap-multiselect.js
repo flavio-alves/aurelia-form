@@ -7,10 +7,17 @@ export let BootstrapMultiselectCustomElement = class BootstrapMultiselectCustomE
     attached() {
         let element = $('#' + this.element.key);
         let multiSelect = $(element).multiselect({
-            selectedClass: null
+            selectedClass: null,
+            includeSelectAllOption: true,
+            nonSelectedText: "Nenhuma opção selecionada",
+            nSelectedText: "opções selecionadas",
+            allSelectedText: "Todas as opções selecionadas",
+            onChange: function (option, checked) {
+                $.uniform.update();
+            }
         });
 
-        $(multiSelect).on('change', event => {
+        $(multiSelect).on('change', function (event) {
             if (event.originalEvent) {
                 return;
             }
@@ -21,6 +28,8 @@ export let BootstrapMultiselectCustomElement = class BootstrapMultiselectCustomE
 
             $(element)[0].dispatchEvent(notice);
         });
+
+        $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
     }
 
     detached() {}

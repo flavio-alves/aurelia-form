@@ -1,5 +1,5 @@
-define(['exports'], function (exports) {
-    'use strict';
+define(["exports"], function (exports) {
+    "use strict";
 
     Object.defineProperty(exports, "__esModule", {
         value: true
@@ -24,7 +24,14 @@ define(['exports'], function (exports) {
         BootstrapMultiselectCustomElement.prototype.attached = function attached() {
             var element = $('#' + this.element.key);
             var multiSelect = $(element).multiselect({
-                selectedClass: null
+                selectedClass: null,
+                includeSelectAllOption: true,
+                nonSelectedText: "Nenhuma opção selecionada",
+                nSelectedText: "opções selecionadas",
+                allSelectedText: "Todas as opções selecionadas",
+                onChange: function onChange(option, checked) {
+                    $.uniform.update();
+                }
             });
 
             $(multiSelect).on('change', function (event) {
@@ -38,6 +45,8 @@ define(['exports'], function (exports) {
 
                 $(element)[0].dispatchEvent(notice);
             });
+
+            $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
         };
 
         BootstrapMultiselectCustomElement.prototype.detached = function detached() {};

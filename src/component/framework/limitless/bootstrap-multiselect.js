@@ -14,24 +14,31 @@ export class BootstrapMultiselectCustomElement {
      * Handles attached event
      */
     attached() {
-        let element     = $('#' + this.element.key);
+        let element = $('#' + this.element.key);
         let multiSelect = $(element).multiselect({
-            selectedClass: null
+            selectedClass: null,
+            includeSelectAllOption: true,
+            nonSelectedText: "Nenhuma opção selecionada",
+            nSelectedText: "opções selecionadas",
+            allSelectedText: "Todas as opções selecionadas",
+            onChange: function (option, checked) {
+                $.uniform.update();
+            }
         });
 
-        // on any change, propagate it to underlying select to trigger two-way bind
-        $(multiSelect).on('change', (event) => {
-            // don't propagate endlessly
+        $(multiSelect).on('change', function (event) {
             if (event.originalEvent) {
                 return;
             }
-            // dispatch to raw select within the custom element
+
             var notice = new Event('change', {
                 bubble: false
             });
 
             $(element)[0].dispatchEvent(notice);
         });
+
+        $(".styled, .multiselect-container input").uniform({radioClass: 'choice'});
     }
 
     /**
