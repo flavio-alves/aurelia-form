@@ -1,17 +1,14 @@
 var _dec, _dec2, _class;
 
 import { bindable, inject, customElement } from "aurelia-framework";
-import { DOM } from 'aurelia-pal';
+import { DOM } from "aurelia-pal";
 
-export let Select2CustomElement = (_dec = customElement('select'), _dec2 = inject(Element), _dec(_class = _dec2(_class = class Select2CustomElement {
-
+export let Select2CustomElement = (_dec = customElement('select2'), _dec2 = inject(Element), _dec(_class = _dec2(_class = class Select2CustomElement {
     constructor(htmlElement) {
-        console.log('constructor');
         this.htmlElement = htmlElement;
     }
 
     activate(model) {
-        console.log('activate');
         this.element = model.element;
         this.model = model.value;
     }
@@ -20,7 +17,7 @@ export let Select2CustomElement = (_dec = customElement('select'), _dec2 = injec
         let element = $('#' + this.element.key);
         let select2 = $(element).select2();
 
-        select2.on('change', event => {
+        $(select2).on('change', event => {
             if (event.originalEvent) {
                 return;
             }
@@ -31,13 +28,10 @@ export let Select2CustomElement = (_dec = customElement('select'), _dec2 = injec
 
             $(element)[0].dispatchEvent(notice);
         });
-
-        console.log("select2 attached");
     }
 
     detached() {
         $('#' + this.element.key).select2('destroy');
-        console.log("select2 detached");
     }
 
 }) || _class) || _class);

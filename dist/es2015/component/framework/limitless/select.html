@@ -3,7 +3,7 @@
     <require from="./form-group"></require>
     <form-group element.bind="element" containerless>
         <div class="col-md-${element.elementSize}">
-            <select name="element.key" id="element.key" attributes.bind="element.attributes" value.bind="value">
+            <select name.one-way="element.key" id.one-way="element.key" value.bind="value" attributes.bind="element.attributes">
                 <option repeat.for="option of element.options" attributes.bind="option.attributes" model.bind="option.id">
                     ${option.name}
                 </option>

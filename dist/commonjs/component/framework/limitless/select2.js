@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -7,22 +7,20 @@ exports.Select2CustomElement = undefined;
 
 var _dec, _dec2, _class;
 
-var _aureliaFramework = require('aurelia-framework');
+var _aureliaFramework = require("aurelia-framework");
 
-var _aureliaPal = require('aurelia-pal');
+var _aureliaPal = require("aurelia-pal");
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFramework.customElement)('select'), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = function () {
+var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFramework.customElement)('select2'), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = function () {
     function Select2CustomElement(htmlElement) {
         _classCallCheck(this, Select2CustomElement);
 
-        console.log('constructor');
         this.htmlElement = htmlElement;
     }
 
     Select2CustomElement.prototype.activate = function activate(model) {
-        console.log('activate');
         this.element = model.element;
         this.model = model.value;
     };
@@ -31,7 +29,7 @@ var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFr
         var element = $('#' + this.element.key);
         var select2 = $(element).select2();
 
-        select2.on('change', function (event) {
+        $(select2).on('change', function (event) {
             if (event.originalEvent) {
                 return;
             }
@@ -42,13 +40,10 @@ var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFr
 
             $(element)[0].dispatchEvent(notice);
         });
-
-        console.log("select2 attached");
     };
 
     Select2CustomElement.prototype.detached = function detached() {
         $('#' + this.element.key).select2('destroy');
-        console.log("select2 detached");
     };
 
     return Select2CustomElement;

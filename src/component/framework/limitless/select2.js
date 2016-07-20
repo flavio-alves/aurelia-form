@@ -1,27 +1,38 @@
 import {bindable, inject, customElement} from "aurelia-framework";
-import {DOM} from 'aurelia-pal';
+import {DOM} from "aurelia-pal";
 
-@customElement('select')
+@customElement('select2')
 @inject(Element)
 export class Select2CustomElement {
 
+    /**
+     * Constructor
+     *
+     * @param htmlElement
+     */
     constructor(htmlElement) {
-        console.log('constructor');
         this.htmlElement = htmlElement;
     }
 
+    /**
+     * Handles activate event
+     *
+     * @param model
+     */
     activate(model) {
-        console.log('activate');
         this.element = model.element;
         this.model = model.value;
     }
 
+    /**
+     * Handles attached event
+     */
     attached() {
         let element = $('#' + this.element.key);
         let select2 = $(element).select2();
 
         // on any change, propagate it to underlying select to trigger two-way bind
-        select2.on('change', (event) => {
+        $(select2).on('change', (event) => {
             // don't propagate endlessly
             // see: http://stackoverflow.com/a/34121891/4354884
             if (event.originalEvent) {
@@ -34,13 +45,13 @@ export class Select2CustomElement {
 
             $(element)[0].dispatchEvent(notice);
         });
-
-        console.log("select2 attached");
     }
 
+    /**
+     * Handles detached event
+     */
     detached() {
         $('#' + this.element.key).select2('destroy');
-        console.log("select2 detached");
     }
 
 }
