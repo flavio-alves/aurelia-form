@@ -4,8 +4,9 @@
     <div class="form-wizard-actions" element.bind="element" attributes.bind="element.attributes">
         <button type="button" repeat.for="action of element.actions" class="btn btn-default"
                 attributes.bind="action.attributes" click.delegate="action.action($event)">
-            <i attributes.bind="action.icon.attributes"></i>
+            <i attributes.bind="action.icon.attributes" if.bind="!action.icon.right"></i>
             ${action.label}
+            <i attributes.bind="action.icon.attributes" if.bind="action.icon.right"></i>
         </button>
     </div>
 </template>
