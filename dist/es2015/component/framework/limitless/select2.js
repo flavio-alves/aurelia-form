@@ -1,13 +1,4 @@
-var _dec, _dec2, _class;
-
-import { bindable, inject, customElement } from "aurelia-framework";
-import { DOM } from "aurelia-pal";
-
-export let Select2CustomElement = (_dec = customElement('select2'), _dec2 = inject(Element), _dec(_class = _dec2(_class = class Select2CustomElement {
-    constructor(htmlElement) {
-        this.htmlElement = htmlElement;
-    }
-
+export let Select2CustomElement = class Select2CustomElement {
     activate(model) {
         this.element = model.element;
         this.model = model.value;
@@ -34,4 +25,4 @@ export let Select2CustomElement = (_dec = customElement('select2'), _dec2 = inje
         $('#' + this.element.key).select2('destroy');
     }
 
-}) || _class) || _class);
+};

@@ -1,18 +1,4 @@
-import {bindable, inject, customElement} from "aurelia-framework";
-import {DOM} from "aurelia-pal";
-
-@customElement('select2')
-@inject(Element)
 export class Select2CustomElement {
-
-    /**
-     * Constructor
-     *
-     * @param htmlElement
-     */
-    constructor(htmlElement) {
-        this.htmlElement = htmlElement;
-    }
 
     /**
      * Handles activate event

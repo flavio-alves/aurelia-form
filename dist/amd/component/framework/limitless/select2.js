@@ -1,10 +1,9 @@
-define(["exports", "aurelia-framework", "aurelia-pal"], function (exports, _aureliaFramework, _aureliaPal) {
-    "use strict";
+define(['exports'], function (exports) {
+    'use strict';
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
-    exports.Select2CustomElement = undefined;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -12,13 +11,9 @@ define(["exports", "aurelia-framework", "aurelia-pal"], function (exports, _aure
         }
     }
 
-    var _dec, _dec2, _class;
-
-    var Select2CustomElement = exports.Select2CustomElement = (_dec = (0, _aureliaFramework.customElement)('select2'), _dec2 = (0, _aureliaFramework.inject)(Element), _dec(_class = _dec2(_class = function () {
-        function Select2CustomElement(htmlElement) {
+    var Select2CustomElement = exports.Select2CustomElement = function () {
+        function Select2CustomElement() {
             _classCallCheck(this, Select2CustomElement);
-
-            this.htmlElement = htmlElement;
         }
 
         Select2CustomElement.prototype.activate = function activate(model) {
@@ -48,5 +43,5 @@ define(["exports", "aurelia-framework", "aurelia-pal"], function (exports, _aure
         };
 
         return Select2CustomElement;
-    }()) || _class) || _class);
+    }();
 });

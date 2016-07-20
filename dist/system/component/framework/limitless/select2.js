@@ -1,9 +1,9 @@
-"use strict";
+'use strict';
 
-System.register(["aurelia-framework", "aurelia-pal"], function (_export, _context) {
+System.register([], function (_export, _context) {
     "use strict";
 
-    var bindable, inject, customElement, DOM, _dec, _dec2, _class, Select2CustomElement;
+    var Select2CustomElement;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -12,19 +12,11 @@ System.register(["aurelia-framework", "aurelia-pal"], function (_export, _contex
     }
 
     return {
-        setters: [function (_aureliaFramework) {
-            bindable = _aureliaFramework.bindable;
-            inject = _aureliaFramework.inject;
-            customElement = _aureliaFramework.customElement;
-        }, function (_aureliaPal) {
-            DOM = _aureliaPal.DOM;
-        }],
+        setters: [],
         execute: function () {
-            _export("Select2CustomElement", Select2CustomElement = (_dec = customElement('select2'), _dec2 = inject(Element), _dec(_class = _dec2(_class = function () {
-                function Select2CustomElement(htmlElement) {
+            _export('Select2CustomElement', Select2CustomElement = function () {
+                function Select2CustomElement() {
                     _classCallCheck(this, Select2CustomElement);
-
-                    this.htmlElement = htmlElement;
                 }
 
                 Select2CustomElement.prototype.activate = function activate(model) {
@@ -54,9 +46,9 @@ System.register(["aurelia-framework", "aurelia-pal"], function (_export, _contex
                 };
 
                 return Select2CustomElement;
-            }()) || _class) || _class));
+            }());
 
-            _export("Select2CustomElement", Select2CustomElement);
+            _export('Select2CustomElement', Select2CustomElement);
         }
     };
 });
