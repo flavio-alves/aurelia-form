@@ -39,6 +39,7 @@ System.register(["./config", "aurelia-view-manager", "./entity-schema", "./form"
                         actions: '{{framepath}}/actions',
                         collection: '{{framepath}}/collection',
                         select2: '{{framepath}}/select2',
+                        'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
 
                         text: '{{framepath}}/input.html',
                         button: '{{framepath}}/input.html',
