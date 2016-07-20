@@ -25,7 +25,7 @@ System.register([], function (_export, _context) {
                 };
 
                 Select2CustomElement.prototype.attached = function attached() {
-                    var select = $('#' + this.element.key);
+                    var element = $('#' + this.element.key);
                     var select2 = $(element).select2({
                         allowClear: true,
                         width: '100%'
@@ -40,7 +40,7 @@ System.register([], function (_export, _context) {
                             bubble: false
                         });
 
-                        $(select)[0].dispatchEvent(notice);
+                        $(element)[0].dispatchEvent(notice);
                     });
                 };
 

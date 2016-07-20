@@ -14,7 +14,7 @@ export class Select2CustomElement {
      * Handles attached event
      */
     attached() {
-        let select  = $('#' + this.element.key);
+        let element  = $('#' + this.element.key);
         let select2 = $(element).select2({
             allowClear: true,
             width: '100%'
@@ -31,7 +31,7 @@ export class Select2CustomElement {
                 bubble: false
             });
 
-            $(select)[0].dispatchEvent(notice);
+            $(element)[0].dispatchEvent(notice);
         });
     }
 
