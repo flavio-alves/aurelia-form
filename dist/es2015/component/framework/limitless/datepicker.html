@@ -1,0 +1,12 @@
+<template>
+    <require from="./../../../attributes"></require>
+    <div class="col-md-${element.elementSize}">
+        <div class="content-group-md">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon-calendar3"></i></span>
+                <input type="text" name.bind="element.key" id.bind="element.key" value.bind="value" class="form-control pickadate"
+                       attributes.bind="element.attributes" placeholder.bind="element.placeholder || ''"/>
+            </div>
+        </div>
+    </div>
+</template>
