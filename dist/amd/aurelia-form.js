@@ -37,6 +37,7 @@ define(["exports", "./entity-schema", "./form", "./config", "aurelia-view-manage
                 collection: '{{framepath}}/collection',
                 select2: '{{framepath}}/select2',
                 'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
+                'datepicker': '{{framepath}}/datepicker',
 
                 text: '{{framepath}}/input.html',
                 button: '{{framepath}}/input.html',
