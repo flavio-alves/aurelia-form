@@ -30,25 +30,18 @@ System.register([], function (_export, _context) {
                         locale: {
                             format: 'YYYY-MM-DD'
                         },
-                        singleDatePicker: element.options.singleDatePicker,
-                        showDropdowns: element.options.endDate,
-                        startDate: element.options.startDate,
-                        endDate: element.options.endDate
-                    });
-
-                    $(datarangepicker).on('change', function (event) {
-                        if (event.originalEvent) {
-                            return;
+                        autoUpdateInput: false,
+                        singleDatePicker: this.element.options.singleDatePicker,
+                        showDropdowns: this.element.options.endDate,
+                        minDate: this.element.options.minDate,
+                        maxDate: this.element.options.maxDate
+                    }, function (start, end, label) {
+                        var date = start.format('YYYY-MM-DD');
+                        if (this.element.options.singleDatePicker !== true) {
+                            date += ' - ' + end.format('YYYY-MM-DD');
                         }
-
-                        var notice = new Event('change', {
-                            bubble: false
-                        });
-
-                        $(element)[0].dispatchEvent(notice);
+                        $(element).val(date);
                     });
-
-                    $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
                 };
 
                 DaterangepickerCustomElement.prototype.detached = function detached() {};
