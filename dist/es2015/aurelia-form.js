@@ -22,7 +22,8 @@ export function configure(aurelia, configCallback) {
             collection: '{{framepath}}/collection',
             select2: '{{framepath}}/select2',
             'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
-            'datepicker': '{{framepath}}/datepicker',
+            'pickadate': '{{framepath}}/pickadate',
+            'daterangepicker': '{{framepath}}/daterangepicker',
 
             text: '{{framepath}}/input.html',
             button: '{{framepath}}/input.html',

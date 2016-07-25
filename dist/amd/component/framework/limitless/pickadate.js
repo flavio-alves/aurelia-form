@@ -11,24 +11,24 @@ define(['exports'], function (exports) {
         }
     }
 
-    var DatepickerCustomElement = exports.DatepickerCustomElement = function () {
-        function DatepickerCustomElement() {
-            _classCallCheck(this, DatepickerCustomElement);
+    var PickadateCustomElement = exports.PickadateCustomElement = function () {
+        function PickadateCustomElement() {
+            _classCallCheck(this, PickadateCustomElement);
         }
 
-        DatepickerCustomElement.prototype.activate = function activate(model) {
+        PickadateCustomElement.prototype.activate = function activate(model) {
             this.element = model.element;
             this.model = model.value;
         };
 
-        DatepickerCustomElement.prototype.attached = function attached() {
+        PickadateCustomElement.prototype.attached = function attached() {
             var element = $('#' + this.element.key);
-            var multiSelect = $(element).pickadate({
+            var pickadate = $(element).pickadate({
                 format: 'yyyy-mm-dd',
                 editable: false
             });
 
-            $(multiSelect).on('change', function (event) {
+            $(pickadate).on('change', function (event) {
                 if (event.originalEvent) {
                     return;
                 }
@@ -39,12 +39,10 @@ define(['exports'], function (exports) {
 
                 $(element)[0].dispatchEvent(notice);
             });
-
-            $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
         };
 
-        DatepickerCustomElement.prototype.detached = function detached() {};
+        PickadateCustomElement.prototype.detached = function detached() {};
 
-        return DatepickerCustomElement;
+        return PickadateCustomElement;
     }();
 });

@@ -1,17 +1,26 @@
-export let DatepickerCustomElement = class DatepickerCustomElement {
+export class PickadateCustomElement {
+
+    /**
+     * Handles activate event
+     *
+     * @param model
+     */
     activate(model) {
         this.element = model.element;
         this.model = model.value;
     }
 
+    /**
+     * Handles attached event
+     */
     attached() {
         let element = $('#' + this.element.key);
-        let multiSelect = $(element).pickadate({
+        let pickadate = $(element).pickadate({
             format: 'yyyy-mm-dd',
             editable: false
         });
 
-        $(multiSelect).on('change', function (event) {
+        $(pickadate).on('change', function (event) {
             if (event.originalEvent) {
                 return;
             }
@@ -22,10 +31,13 @@ export let DatepickerCustomElement = class DatepickerCustomElement {
 
             $(element)[0].dispatchEvent(notice);
         });
-
-        $(".styled, .multiselect-container input").uniform({ radioClass: 'choice' });
     }
 
-    detached() {}
+    /**
+     * Handles detached event
+     */
+    detached() {
+        // $('#' + this.element.key).select2('destroy');
+    }
 
-};
+}
