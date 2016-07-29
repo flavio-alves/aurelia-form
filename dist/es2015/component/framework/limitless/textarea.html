@@ -1,11 +1,11 @@
 <template>
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
-    <form-group element.bind="element" containerless>
-        <div class="col-md-${element.elementSize}">
+    <div class="col-md-${element.size}">
+        <form-group element.bind="element" containerless>
             <textarea name.bind="element.key" value.bind="value" class="form-control"
-                      attributes.bind="element.attributes" placeholder.bind="element.placeholder || ''">
+                      attributes.bind="element.attributes" placeholder.bind="element.placeholder || element.label">
             </textarea>
-        </div>
-    </form-group>
+        </form-group>
+    </div>
 </template>

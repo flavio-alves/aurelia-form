@@ -1,14 +1,15 @@
 <template>
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
-    <form-group element.bind="element" containerless>
-        <div class="col-md-${element.elementSize} multi-select-full">
-            <select name.one-way="element.key" id.one-way="element.key" value.bind="value"
-                    attributes.bind="element.attributes" multiple="multiple">
-                <option repeat.for="option of element.options" model.bind="option.id" attributes.bind="option.attributes">
-                    ${option.name}
-                </option>
-            </select>
-        </div>
-    </form-group>
+    <div class="col-md-${element.size}">
+        <form-group element.bind="element" containerless>
+            <div class="multi-select-full">
+                <select name.one-way="element.key" id.one-way="element.key" value.bind="value" attributes.bind="element.attributes" multiple="multiple">
+                    <option repeat.for="option of element.options" model.bind="option.id" attributes.bind="option.attributes">
+                        ${option.name}
+                    </option>
+                </select>
+            </div>
+        </form-group>
+    </div>
 </template>

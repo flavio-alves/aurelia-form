@@ -1,13 +1,13 @@
 <template>
     <require from="./../../../attributes"></require>
     <require from="./form-group"></require>
-    <form-group element.bind="element" containerless>
-        <div class="col-md-${element.elementSize}">
+    <div class="col-md-${element.size}">
+        <form-group element.bind="element" containerless>
             <div class="input-group">
                 <input type="text" name.bind="element.key" id.bind="element.key" value.bind="value" class="form-control pickadate"
-                       attributes.bind="element.attributes" placeholder.bind="element.placeholder || ''"/>
+                       attributes.bind="element.attributes" placeholder.bind="element.placeholder || element.label"/>
                 <span class="input-group-addon"><i class="icon-calendar3"></i></span>
             </div>
-        </div>
-    </form-group>
+        </form-group>
+    </div>
 </template>
