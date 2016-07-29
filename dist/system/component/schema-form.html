@@ -1,10 +1,4 @@
 <template>
-    <form class="form-horizontal">
-        <slot name="schema-form-header" containerless></slot>
-        <div class="form-body">
-            <form-alert if.bind="alert.visible" alert.bind="alert" containerless></form-alert>
-            <form-fields model.bind="model" schema.bind="schema" containerless></form-fields>
-        </div>
-        <slot name="schema-form-footer" containerless></slot>
-    </form>
+    <form-alert if.bind="alert.visible" alert.bind="alert" containerless></form-alert>
+    <form-fields model.bind="model" schema.bind="schema" containerless></form-fields>
 </template>

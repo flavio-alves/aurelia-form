@@ -1,6 +1,5 @@
 <template>
     <compose if.bind="!hasViewModel" view.bind="view" containerless></compose>
-    <compose if.bind="hasViewModel" model.bind="{element: element, value: value}"
-             view-model.bind="view" containerless>
+    <compose if.bind="hasViewModel" model.bind="{element: element, value: value}" view-model.bind="view" containerless>
     </compose>
 </template>
