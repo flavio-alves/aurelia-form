@@ -1,6 +1,3 @@
-import {customElement} from "aurelia-framework";
-
-@customElement('textarea')
 export class TextareaAutosize {
 
     /**

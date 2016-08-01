@@ -3,15 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.TextareaAutosize = undefined;
-
-var _dec, _class;
-
-var _aureliaFramework = require('aurelia-framework');
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var TextareaAutosize = exports.TextareaAutosize = (_dec = (0, _aureliaFramework.customElement)('textarea'), _dec(_class = function () {
+var TextareaAutosize = exports.TextareaAutosize = function () {
     function TextareaAutosize() {
         _classCallCheck(this, TextareaAutosize);
     }
@@ -34,4 +29,4 @@ var TextareaAutosize = exports.TextareaAutosize = (_dec = (0, _aureliaFramework.
     };
 
     return TextareaAutosize;
-}()) || _class);
+}();
