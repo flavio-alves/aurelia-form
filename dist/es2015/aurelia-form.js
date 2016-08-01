@@ -24,6 +24,7 @@ export function configure(aurelia, configCallback) {
             'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
             'pickadate': '{{framepath}}/pickadate',
             'daterangepicker': '{{framepath}}/daterangepicker',
+            'textarea-autosize': '{{framepath}}/textarea-autosize',
 
             text: '{{framepath}}/input.html',
             button: '{{framepath}}/input.html',

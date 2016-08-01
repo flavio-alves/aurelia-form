@@ -42,6 +42,7 @@ System.register(["./config", "aurelia-view-manager", "./entity-schema", "./form"
                         'bootstrap-multiselect': '{{framepath}}/bootstrap-multiselect',
                         'pickadate': '{{framepath}}/pickadate',
                         'daterangepicker': '{{framepath}}/daterangepicker',
+                        'textarea-autosize': '{{framepath}}/textarea-autosize',
 
                         text: '{{framepath}}/input.html',
                         button: '{{framepath}}/input.html',
