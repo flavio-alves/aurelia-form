@@ -3,7 +3,7 @@
     <require from="./form-group"></require>
     <div class="col-md-${element.size}">
         <form-group element.bind="element" containerless>
-            <textarea name.bind="element.key" value.bind="value" class="form-control"
+            <textarea name.bind="element.key" id.bind="element.key" value.bind="value" class="form-control"
                       attributes.bind="element.attributes" placeholder.bind="element.placeholder || element.label">
             </textarea>
         </form-group>
