@@ -1,9 +1,10 @@
-define(['exports'], function (exports) {
+define(['exports', 'autosize'], function (exports, _autosize) {
     'use strict';
 
     Object.defineProperty(exports, "__esModule", {
         value: true
     });
+    exports.TextareaAutosize = undefined;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -24,13 +25,13 @@ define(['exports'], function (exports) {
         TextareaAutosize.prototype.attached = function attached() {
             var element = $('#' + this.element.key);
 
-            autosize(element);
+            (0, _autosize.autosize)(element);
         };
 
         TextareaAutosize.prototype.detached = function detached() {
             var element = $('#' + this.element.key);
 
-            autosize.destroy(element);
+            _autosize.autosize.destroy(element);
         };
 
         return TextareaAutosize;

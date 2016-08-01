@@ -1,3 +1,5 @@
+import { autosize } from "autosize";
+
 export let TextareaAutosize = class TextareaAutosize {
     activate(model) {
         this.element = model.element;

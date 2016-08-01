@@ -1,9 +1,9 @@
 'use strict';
 
-System.register([], function (_export, _context) {
+System.register(['autosize'], function (_export, _context) {
     "use strict";
 
-    var TextareaAutosize;
+    var autosize, TextareaAutosize;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -12,7 +12,9 @@ System.register([], function (_export, _context) {
     }
 
     return {
-        setters: [],
+        setters: [function (_autosize) {
+            autosize = _autosize.autosize;
+        }],
         execute: function () {
             _export('TextareaAutosize', TextareaAutosize = function () {
                 function TextareaAutosize() {
