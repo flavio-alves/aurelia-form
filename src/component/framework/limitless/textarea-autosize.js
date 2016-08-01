@@ -1,3 +1,5 @@
+import {autosize} from "autosize";
+
 export class TextareaAutosize {
 
     /**
