@@ -50,6 +50,10 @@ System.register(["./../form-group"], function (_export, _context) {
                 }
 
                 FormGroupCustomElement.prototype.attached = function attached() {
+
+                    var onClass = "on";
+                    var showClass = "is-visible";
+
                     $("input:not(.token-input):not(.bootstrap-tagsinput > input), textarea, select").on("checkval change", function () {
                         var label = $(this).parents('.form-group-material').children(".control-label");
 

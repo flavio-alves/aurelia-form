@@ -3,6 +3,10 @@ import { FormGroup } from "./../form-group";
 export let FormGroupCustomElement = class FormGroupCustomElement extends FormGroup {
 
     attached() {
+
+        let onClass = "on";
+        let showClass = "is-visible";
+
         $("input:not(.token-input):not(.bootstrap-tagsinput > input), textarea, select").on("checkval change", function () {
             var label = $(this).parents('.form-group-material').children(".control-label");
 

@@ -7,6 +7,9 @@ export class FormGroupCustomElement extends FormGroup {
 
     attached() {
 
+        let onClass = "on";
+        let showClass = "is-visible";
+
         // Setup
         $("input:not(.token-input):not(.bootstrap-tagsinput > input), textarea, select").on("checkval change", function () {
 
