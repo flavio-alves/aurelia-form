@@ -3,7 +3,7 @@
 System.register(["../config", "aurelia-framework", "aurelia-view-manager"], function (_export, _context) {
     "use strict";
 
-    var Config, bindingMode, bindable, computedFrom, inject, customElement, resolvedView, ViewManager, _createClass, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _class, _desc, _value, _class2, _descriptor, _descriptor2, FormField;
+    var Config, bindingMode, bindable, computedFrom, inject, customElement, resolvedView, ViewManager, _createClass, _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _desc, _value, _class2, _descriptor, _descriptor2, FormField;
 
     function _initDefineProp(target, property, descriptor, context) {
         if (!descriptor) return;
@@ -86,7 +86,7 @@ System.register(["../config", "aurelia-framework", "aurelia-view-manager"], func
                 };
             }();
 
-            _export("FormField", FormField = (_dec = customElement('form-field'), _dec2 = resolvedView('spoonx/form', 'form-field'), _dec3 = inject(Config, ViewManager), _dec4 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec5 = computedFrom('element'), _dec6 = computedFrom('element'), _dec7 = computedFrom('view'), _dec8 = computedFrom('element'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
+            _export("FormField", FormField = (_dec = customElement('form-field'), _dec2 = resolvedView('spoonx/form', 'form-field'), _dec3 = inject(Config, ViewManager), _dec4 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec5 = bindable({ defaultBindingMode: bindingMode.twoWay }), _dec6 = computedFrom('element'), _dec7 = computedFrom('element'), _dec8 = computedFrom('view'), _dec9 = computedFrom('element'), _dec(_class = _dec2(_class = _dec3(_class = (_class2 = function () {
                 function FormField(config, viewManager) {
                     _classCallCheck(this, FormField);
 
@@ -136,13 +136,13 @@ System.register(["../config", "aurelia-framework", "aurelia-view-manager"], func
                 }]);
 
                 return FormField;
-            }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "element", [bindable], {
+            }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "element", [_dec4], {
                 enumerable: true,
                 initializer: null
-            }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "value", [_dec4], {
+            }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "value", [_dec5], {
                 enumerable: true,
                 initializer: null
-            }), _applyDecoratedDescriptor(_class2.prototype, "label", [_dec5], Object.getOwnPropertyDescriptor(_class2.prototype, "label"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "view", [_dec6], Object.getOwnPropertyDescriptor(_class2.prototype, "view"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "hasViewModel", [_dec7], Object.getOwnPropertyDescriptor(_class2.prototype, "hasViewModel"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "type", [_dec8], Object.getOwnPropertyDescriptor(_class2.prototype, "type"), _class2.prototype)), _class2)) || _class) || _class) || _class));
+            }), _applyDecoratedDescriptor(_class2.prototype, "label", [_dec6], Object.getOwnPropertyDescriptor(_class2.prototype, "label"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "view", [_dec7], Object.getOwnPropertyDescriptor(_class2.prototype, "view"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "hasViewModel", [_dec8], Object.getOwnPropertyDescriptor(_class2.prototype, "hasViewModel"), _class2.prototype), _applyDecoratedDescriptor(_class2.prototype, "type", [_dec9], Object.getOwnPropertyDescriptor(_class2.prototype, "type"), _class2.prototype)), _class2)) || _class) || _class) || _class));
 
             _export("FormField", FormField);
         }

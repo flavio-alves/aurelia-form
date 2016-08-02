@@ -7,7 +7,8 @@ import {resolvedView, ViewManager} from "aurelia-view-manager";
 @inject(Config, ViewManager)
 export class FormField {
 
-    @bindable element;
+    @bindable({defaultBindingMode: bindingMode.twoWay})
+    element;
 
     @bindable({defaultBindingMode: bindingMode.twoWay})
     value;
