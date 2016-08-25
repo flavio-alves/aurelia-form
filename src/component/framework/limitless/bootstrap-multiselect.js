@@ -1,4 +1,13 @@
-export class BootstrapMultiselectCustomElement {
+import {bindingMode, bindable, customElement} from "aurelia-framework";
+
+@customElement('bootstrap-multiselect')
+export class BootstrapMultiselect {
+
+    @bindable({defaultBindingMode: bindingMode.twoWay})
+    element;
+
+    @bindable({defaultBindingMode: bindingMode.twoWay})
+    value;
 
     /**
      * Handles activate event
@@ -7,7 +16,7 @@ export class BootstrapMultiselectCustomElement {
      */
     activate(model) {
         this.element = model.element;
-        this.model = model.value;
+        this.value = model.value;
     }
 
     /**
