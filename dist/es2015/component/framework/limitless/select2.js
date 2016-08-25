@@ -1,7 +1,7 @@
 export let Select2CustomElement = class Select2CustomElement {
     activate(model) {
         this.element = model.element;
-        this.model = model.value;
+        this.value = model.value;
     }
 
     attached() {

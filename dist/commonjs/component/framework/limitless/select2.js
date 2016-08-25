@@ -13,7 +13,7 @@ var Select2CustomElement = exports.Select2CustomElement = function () {
 
     Select2CustomElement.prototype.activate = function activate(model) {
         this.element = model.element;
-        this.model = model.value;
+        this.value = model.value;
     };
 
     Select2CustomElement.prototype.attached = function attached() {

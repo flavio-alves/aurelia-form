@@ -1,5 +1,5 @@
 <template>
     <div class="row" repeat.for="row of schema">
-        <form-field repeat.for="element of row" element.bind="element" value.bind="model[element.key]" containerless> </form-field>
+        <form-field repeat.for="element of row" element.bind="element" value.bind="model[element.key]" containerless></form-field>
     </div>
 </template>

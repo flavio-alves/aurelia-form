@@ -18,7 +18,7 @@ define(['exports'], function (exports) {
 
         Select2CustomElement.prototype.activate = function activate(model) {
             this.element = model.element;
-            this.model = model.value;
+            this.value = model.value;
         };
 
         Select2CustomElement.prototype.attached = function attached() {
