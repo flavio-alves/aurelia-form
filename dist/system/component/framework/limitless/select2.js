@@ -67,12 +67,12 @@ System.register(['aurelia-framework'], function (_export, _context) {
 
                     _initDefineProp(this, 'element', _descriptor, this);
 
-                    _initDefineProp(this, 'value', _descriptor2, this);
+                    _initDefineProp(this, 'model', _descriptor2, this);
                 }
 
                 Select2.prototype.activate = function activate(model) {
                     this.element = model.element;
-                    this.value = model.value;
+                    this.model = model.value;
                 };
 
                 Select2.prototype.attached = function attached() {
@@ -103,7 +103,7 @@ System.register(['aurelia-framework'], function (_export, _context) {
             }(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'element', [_dec2], {
                 enumerable: true,
                 initializer: null
-            }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'value', [_dec3], {
+            }), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'model', [_dec3], {
                 enumerable: true,
                 initializer: null
             })), _class2)) || _class));

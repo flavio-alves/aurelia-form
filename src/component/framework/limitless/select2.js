@@ -7,7 +7,7 @@ export class Select2 {
     element;
 
     @bindable({defaultBindingMode: bindingMode.twoWay})
-    value;
+    model;
 
     /**
      * Handles activate event
@@ -16,7 +16,7 @@ export class Select2 {
      */
     activate(model) {
         this.element = model.element;
-        this.value = model.value;
+        this.model = model.value;
     }
 
     /**
