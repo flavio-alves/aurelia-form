@@ -3,12 +3,6 @@ import {bindingMode, bindable, customElement} from "aurelia-framework";
 @customElement('select2')
 export class Select2 {
 
-    @bindable({defaultBindingMode: bindingMode.twoWay})
-    element;
-
-    @bindable({defaultBindingMode: bindingMode.twoWay})
-    model;
-
     /**
      * Handles activate event
      *
