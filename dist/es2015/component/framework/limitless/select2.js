@@ -1,6 +1,6 @@
 var _dec, _class;
 
-import { bindingMode, bindable, customElement } from "aurelia-framework";
+import { customElement } from "aurelia-framework";
 
 export let Select2 = (_dec = customElement('select2'), _dec(_class = class Select2 {
     activate(model) {

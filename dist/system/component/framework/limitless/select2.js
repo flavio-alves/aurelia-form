@@ -3,7 +3,7 @@
 System.register(['aurelia-framework'], function (_export, _context) {
     "use strict";
 
-    var bindingMode, bindable, customElement, _dec, _class, Select2;
+    var customElement, _dec, _class, Select2;
 
     function _classCallCheck(instance, Constructor) {
         if (!(instance instanceof Constructor)) {
@@ -13,8 +13,6 @@ System.register(['aurelia-framework'], function (_export, _context) {
 
     return {
         setters: [function (_aureliaFramework) {
-            bindingMode = _aureliaFramework.bindingMode;
-            bindable = _aureliaFramework.bindable;
             customElement = _aureliaFramework.customElement;
         }],
         execute: function () {

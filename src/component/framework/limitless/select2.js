@@ -1,4 +1,4 @@
-import {bindingMode, bindable, customElement} from "aurelia-framework";
+import {customElement} from "aurelia-framework";
 
 @customElement('select2')
 export class Select2 {
