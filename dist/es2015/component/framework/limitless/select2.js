@@ -3,14 +3,6 @@ var _dec, _class;
 import { customElement } from "aurelia-framework";
 
 export let Select2 = (_dec = customElement('select2'), _dec(_class = class Select2 {
-    constructor() {
-        this.optionsMatcher = (a, b) => {
-            console.log('a - ' + a);
-            console.log('b - ' + b);
-            return a === b;
-        };
-    }
-
     activate(model) {
         this.element = model.element;
         this.model = model.value;
