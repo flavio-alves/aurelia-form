@@ -52,5 +52,9 @@ var BootstrapMultiselect = exports.BootstrapMultiselect = (_dec = (0, _aureliaFr
 
     BootstrapMultiselect.prototype.detached = function detached() {};
 
+    BootstrapMultiselect.prototype.selectedAttribute = function selectedAttribute(option) {
+        return this.model.indexOf(option) > -1 ? 'selected' : '';
+    };
+
     return BootstrapMultiselect;
 }()) || _class);

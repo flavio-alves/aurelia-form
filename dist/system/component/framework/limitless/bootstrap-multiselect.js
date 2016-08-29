@@ -57,6 +57,10 @@ System.register(['aurelia-framework'], function (_export, _context) {
 
                 BootstrapMultiselect.prototype.detached = function detached() {};
 
+                BootstrapMultiselect.prototype.selectedAttribute = function selectedAttribute(option) {
+                    return this.model.indexOf(option) > -1 ? 'selected' : '';
+                };
+
                 return BootstrapMultiselect;
             }()) || _class));
 

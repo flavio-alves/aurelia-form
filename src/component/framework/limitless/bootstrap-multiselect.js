@@ -52,4 +52,15 @@ export class BootstrapMultiselect {
         // $('#' + this.element.key).select2('destroy');
     }
 
+    /**
+     * Returns selected attribute
+     *
+     * @param option
+     *
+     * @returns {string} 'select' if option == model, otherwise returns ''
+     */
+    selectedAttribute(option) {
+        return this.model.indexOf(option) > -1 ? 'selected' : ''
+    };
+
 }

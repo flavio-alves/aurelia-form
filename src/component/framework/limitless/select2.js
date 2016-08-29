@@ -45,4 +45,15 @@ export class Select2 {
         $('#' + this.element.key).select2('destroy');
     }
 
+    /**
+     * Returns selected attribute
+     *
+     * @param option
+     *
+     * @returns {string} 'select' if option == model, otherwise returns ''
+     */
+    selectedAttribute(option) {
+        return option == this.model ? 'selected' : '';
+    };
+
 }

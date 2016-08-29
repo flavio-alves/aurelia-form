@@ -45,5 +45,9 @@ var Select2 = exports.Select2 = (_dec = (0, _aureliaFramework.customElement)('se
         $('#' + this.element.key).select2('destroy');
     };
 
+    Select2.prototype.selectedAttribute = function selectedAttribute(option) {
+        return option == this.model ? 'selected' : '';
+    };
+
     return Select2;
 }()) || _class);

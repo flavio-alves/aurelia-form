@@ -55,6 +55,10 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
 
         BootstrapMultiselect.prototype.detached = function detached() {};
 
+        BootstrapMultiselect.prototype.selectedAttribute = function selectedAttribute(option) {
+            return this.model.indexOf(option) > -1 ? 'selected' : '';
+        };
+
         return BootstrapMultiselect;
     }()) || _class);
 });

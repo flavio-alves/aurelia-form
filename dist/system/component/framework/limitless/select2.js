@@ -50,6 +50,10 @@ System.register(['aurelia-framework'], function (_export, _context) {
                     $('#' + this.element.key).select2('destroy');
                 };
 
+                Select2.prototype.selectedAttribute = function selectedAttribute(option) {
+                    return option == this.model ? 'selected' : '';
+                };
+
                 return Select2;
             }()) || _class));
 
