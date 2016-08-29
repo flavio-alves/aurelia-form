@@ -52,8 +52,4 @@ export class BootstrapMultiselect {
         // $('#' + this.element.key).select2('destroy');
     }
 
-    isSelected(option) {
-        return this.value.indexOf(option) > -1;
-    }
-
 }

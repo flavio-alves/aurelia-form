@@ -45,8 +45,4 @@ export class Select2 {
         $('#' + this.element.key).select2('destroy');
     }
 
-    isSelected(option) {
-        return option == this.value;
-    }
-
 }

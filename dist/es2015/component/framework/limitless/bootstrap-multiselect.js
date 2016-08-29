@@ -39,8 +39,4 @@ export let BootstrapMultiselect = (_dec = customElement('bootstrap-multiselect')
 
     detached() {}
 
-    isSelected(option) {
-        return this.value.indexOf(option) > -1;
-    }
-
 }) || _class);

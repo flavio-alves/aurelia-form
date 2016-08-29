@@ -48,10 +48,6 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
             $('#' + this.element.key).select2('destroy');
         };
 
-        Select2.prototype.isSelected = function isSelected(option) {
-            return option == this.value;
-        };
-
         return Select2;
     }()) || _class);
 });

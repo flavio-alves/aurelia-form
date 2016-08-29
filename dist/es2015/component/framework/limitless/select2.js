@@ -32,8 +32,4 @@ export let Select2 = (_dec = customElement('select2'), _dec(_class = class Selec
         $('#' + this.element.key).select2('destroy');
     }
 
-    isSelected(option) {
-        return option == this.value;
-    }
-
 }) || _class);
