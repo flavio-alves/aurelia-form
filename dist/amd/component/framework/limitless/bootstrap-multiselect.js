@@ -12,38 +12,9 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
         }
     }
 
-    function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
-        var desc = {};
-        Object['ke' + 'ys'](descriptor).forEach(function (key) {
-            desc[key] = descriptor[key];
-        });
-        desc.enumerable = !!desc.enumerable;
-        desc.configurable = !!desc.configurable;
+    var _dec, _class;
 
-        if ('value' in desc || desc.initializer) {
-            desc.writable = true;
-        }
-
-        desc = decorators.slice().reverse().reduce(function (desc, decorator) {
-            return decorator(target, property, desc) || desc;
-        }, desc);
-
-        if (context && desc.initializer !== void 0) {
-            desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
-            desc.initializer = undefined;
-        }
-
-        if (desc.initializer === void 0) {
-            Object['define' + 'Property'](target, property, desc);
-            desc = null;
-        }
-
-        return desc;
-    }
-
-    var _dec, _dec2, _class, _desc, _value, _class2;
-
-    var BootstrapMultiselect = exports.BootstrapMultiselect = (_dec = (0, _aureliaFramework.customElement)('bootstrap-multiselect'), _dec2 = (0, _aureliaFramework.computedFrom)('value'), _dec(_class = (_class2 = function () {
+    var BootstrapMultiselect = exports.BootstrapMultiselect = (_dec = (0, _aureliaFramework.customElement)('bootstrap-multiselect'), _dec(_class = function () {
         function BootstrapMultiselect() {
             _classCallCheck(this, BootstrapMultiselect);
         }
@@ -84,10 +55,10 @@ define(['exports', 'aurelia-framework'], function (exports, _aureliaFramework) {
 
         BootstrapMultiselect.prototype.detached = function detached() {};
 
-        BootstrapMultiselect.prototype.checkSelected = function checkSelected(option) {
+        BootstrapMultiselect.prototype.isSelected = function isSelected(option) {
             return this.value.indexOf(option) > -1;
         };
 
         return BootstrapMultiselect;
-    }(), (_applyDecoratedDescriptor(_class2.prototype, 'checkSelected', [_dec2], Object.getOwnPropertyDescriptor(_class2.prototype, 'checkSelected'), _class2.prototype)), _class2)) || _class);
+    }()) || _class);
 });
