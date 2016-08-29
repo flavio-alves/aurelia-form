@@ -1,4 +1,4 @@
-import {customElement} from "aurelia-framework";
+import {computedFrom, customElement} from "aurelia-framework";
 
 @customElement('select2')
 export class Select2 {
@@ -43,6 +43,11 @@ export class Select2 {
      */
     detached() {
         $('#' + this.element.key).select2('destroy');
+    }
+
+    @computedFrom('value')
+    checkSelected(option) {
+        return option == this.value;
     }
 
 }

@@ -5,7 +5,7 @@
         <form-group element.bind="element" containerless>
             <div class="multi-select-full">
                 <select name.bind="element.key" id.bind="element.key" value.bind="value" attributes.bind="element.attributes" multiple="multiple">
-                    <option repeat.for="option of element.options" model.bind="option.id" attributes.bind="option.attributes">
+                    <option repeat.for="option of element.options" value.bind="option.id" selected.bind="checkSelected(option.id)" attributes.bind="option.attributes">
                         ${option.name}
                     </option>
                 </select>
