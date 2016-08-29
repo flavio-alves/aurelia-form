@@ -1,4 +1,4 @@
-import {computedFrom, customElement} from "aurelia-framework";
+import {customElement} from "aurelia-framework";
 
 @customElement('bootstrap-multiselect')
 export class BootstrapMultiselect {
@@ -52,8 +52,7 @@ export class BootstrapMultiselect {
         // $('#' + this.element.key).select2('destroy');
     }
 
-    @computedFrom('value')
-    checkSelected(option) {
+    isSelected(option) {
         return this.value.indexOf(option) > -1;
     }
 

@@ -1,4 +1,4 @@
-import {computedFrom, customElement} from "aurelia-framework";
+import {customElement} from "aurelia-framework";
 
 @customElement('select2')
 export class Select2 {
@@ -17,7 +17,7 @@ export class Select2 {
      * Handles attached event
      */
     attached() {
-        let element  = $('#' + this.element.key);
+        let element = $('#' + this.element.key);
         let select2 = $(element).select2({
             allowClear: true,
             width: '100%'
@@ -45,8 +45,7 @@ export class Select2 {
         $('#' + this.element.key).select2('destroy');
     }
 
-    @computedFrom('value')
-    checkSelected(option) {
+    isSelected(option) {
         return option == this.value;
     }
 
