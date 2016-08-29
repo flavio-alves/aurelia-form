@@ -3,6 +3,12 @@ import {customElement} from "aurelia-framework";
 @customElement('select2')
 export class Select2 {
 
+    optionsMatcher = (a, b) => {
+        console.log('a - ' + a);
+        console.log('b - ' + b);
+        return a === b;
+    };
+
     /**
      * Handles activate event
      *

@@ -14,6 +14,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Select2 = exports.Select2 = (_dec = (0, _aureliaFramework.customElement)('select2'), _dec(_class = function () {
     function Select2() {
         _classCallCheck(this, Select2);
+
+        this.optionsMatcher = function (a, b) {
+            console.log('a - ' + a);
+            console.log('b - ' + b);
+            return a === b;
+        };
     }
 
     Select2.prototype.activate = function activate(model) {

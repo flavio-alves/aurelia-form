@@ -19,6 +19,12 @@ System.register(['aurelia-framework'], function (_export, _context) {
             _export('Select2', Select2 = (_dec = customElement('select2'), _dec(_class = function () {
                 function Select2() {
                     _classCallCheck(this, Select2);
+
+                    this.optionsMatcher = function (a, b) {
+                        console.log('a - ' + a);
+                        console.log('b - ' + b);
+                        return a === b;
+                    };
                 }
 
                 Select2.prototype.activate = function activate(model) {
